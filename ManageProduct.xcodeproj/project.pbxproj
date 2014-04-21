@@ -22,6 +22,7 @@
 		666C0C70190503B900260977 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666C0C54190503B800260977 /* CoreData.framework */; };
 		666C0C78190503B900260977 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 666C0C76190503B900260977 /* InfoPlist.strings */; };
 		666C0C7A190503B900260977 /* ManageProductTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 666C0C79190503B900260977 /* ManageProductTests.m */; };
+		666C0C841905105E00260977 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666C0C831905105D00260977 /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		666C0C75190503B900260977 /* ManageProductTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ManageProductTests-Info.plist"; sourceTree = "<group>"; };
 		666C0C77190503B900260977 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		666C0C79190503B900260977 /* ManageProductTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManageProductTests.m; sourceTree = "<group>"; };
+		666C0C831905105D00260977 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				666C0C65190503B800260977 /* Images.xcassets */,
 				666C0C62190503B800260977 /* ManageProduct.xcdatamodeld */,
 				666C0C57190503B800260977 /* Supporting Files */,
+				666C0C831905105D00260977 /* Storyboard.storyboard */,
 			);
 			path = ManageProduct;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			files = (
 				666C0C5B190503B800260977 /* InfoPlist.strings in Resources */,
 				666C0C66190503B800260977 /* Images.xcassets in Resources */,
+				666C0C841905105E00260977 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

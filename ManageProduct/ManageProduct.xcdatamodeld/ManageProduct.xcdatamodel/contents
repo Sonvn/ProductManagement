@@ -1,4 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12F37" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Category" syncable="YES">
+        <attribute name="category_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="category_name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="relationship1" inverseEntity="Product" syncable="YES"/>
+        <relationship name="relationship1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Provider_Category" inverseName="relationship1" inverseEntity="Provider_Category" syncable="YES"/>
+    </entity>
+    <entity name="Product" syncable="YES">
+        <attribute name="product_category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="product_decription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="product_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="product_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="product_provider" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Provider" inverseName="relationship1" inverseEntity="Provider" syncable="YES"/>
+        <relationship name="relationship1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="relationship" inverseEntity="Category" syncable="YES"/>
+    </entity>
+    <entity name="Provider" syncable="YES">
+        <attribute name="provider_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="provider_name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Deny" destinationEntity="Provider_Category" inverseName="relationship" inverseEntity="Provider_Category" syncable="YES"/>
+        <relationship name="relationship1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="relationship" inverseEntity="Product" syncable="YES"/>
+    </entity>
+    <entity name="Provider_Category" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id_category" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="id_product" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Provider" inverseName="relationship" inverseEntity="Provider" syncable="YES"/>
+        <relationship name="relationship1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="relationship1" inverseEntity="Category" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Product" positionX="142" positionY="192" width="128" height="148"/>
+        <element name="Provider" positionX="306" positionY="-45" width="128" height="103"/>
+        <element name="Category" positionX="-54" positionY="-45" width="128" height="103"/>
+        <element name="Provider_Category" positionX="135" positionY="-45" width="128" height="118"/>
+    </elements>
 </model>
