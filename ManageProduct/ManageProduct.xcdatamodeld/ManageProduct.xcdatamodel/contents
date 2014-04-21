@@ -10,6 +10,7 @@
         <attribute name="product_category" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="product_decription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="product_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="product_image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="product_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="product_provider" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Provider" inverseName="relationship1" inverseEntity="Provider" syncable="YES"/>
@@ -29,9 +30,9 @@
         <relationship name="relationship1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="relationship1" inverseEntity="Category" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Product" positionX="142" positionY="192" width="128" height="148"/>
-        <element name="Provider" positionX="306" positionY="-45" width="128" height="103"/>
         <element name="Category" positionX="-54" positionY="-45" width="128" height="103"/>
+        <element name="Product" positionX="142" positionY="192" width="128" height="163"/>
+        <element name="Provider" positionX="306" positionY="-45" width="128" height="103"/>
         <element name="Provider_Category" positionX="135" positionY="-45" width="128" height="118"/>
     </elements>
 </model>
