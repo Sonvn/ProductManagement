@@ -26,6 +26,7 @@
 		666C0C78190503B900260977 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 666C0C76190503B900260977 /* InfoPlist.strings */; };
 		666C0C7A190503B900260977 /* ManageProductTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 666C0C79190503B900260977 /* ManageProductTests.m */; };
 		666C0C841905105E00260977 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666C0C831905105D00260977 /* Storyboard.storyboard */; };
+		66CEB7031906A51300E76CD6 /* setting-icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 66CEB7021906A51300E76CD6 /* setting-icon1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		666C0C77190503B900260977 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		666C0C79190503B900260977 /* ManageProductTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManageProductTests.m; sourceTree = "<group>"; };
 		666C0C831905105D00260977 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		66CEB7021906A51300E76CD6 /* setting-icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting-icon1.png"; sourceTree = SOURCE_ROOT; };
 		E57E3AE468BE4DEDA9669FE7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -136,6 +138,7 @@
 				666C0C57190503B800260977 /* Supporting Files */,
 				666C0C831905105D00260977 /* Storyboard.storyboard */,
 				483FEE8319067E7700B23141 /* CategoryTableViewController.h */,
+				66CEB7021906A51300E76CD6 /* setting-icon1.png */,
 				483FEE8419067E7700B23141 /* CategoryTableViewController.m */,
 				483FEE8619067F6900B23141 /* ProductTableViewController.h */,
 				483FEE8719067F6900B23141 /* ProductTableViewController.m */,
@@ -250,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				666C0C5B190503B800260977 /* InfoPlist.strings in Resources */,
+				66CEB7031906A51300E76CD6 /* setting-icon1.png in Resources */,
 				666C0C66190503B800260977 /* Images.xcassets in Resources */,
 				666C0C841905105E00260977 /* Storyboard.storyboard in Resources */,
 			);
