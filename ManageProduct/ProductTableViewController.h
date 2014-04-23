@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ProductTableViewController : UITableViewController
+#import "RootViewController.h"
+@interface ProductTableViewController : RootViewController
 
 @end

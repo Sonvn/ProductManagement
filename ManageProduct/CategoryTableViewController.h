@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RootViewController.h"
 
-@interface CategoryTableViewController : UITableViewController
+@interface CategoryTableViewController : RootViewController
 
-- (IBAction)unwindToList:(UIStoryboardSegue *)segue;
+- (void) addCategory:(id)sender;
 
 @end

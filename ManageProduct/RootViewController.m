@@ -1,20 +1,22 @@
 //
-//  CategoryTableViewController.m
+//  RootViewController.m
 //  ManageProduct
 //
-//  Created by Ngọc Nguyên on 4/22/14.
+//  Created by Sonvn on 4/23/14.
 //  Copyright (c) 2014 MAC. All rights reserved.
 //
 
+#import "RootViewController.h"
+#import "NavigationViewController.h"
+#import "ProductTableViewController.h"
+#import "ProviderTableViewController.h"
 #import "CategoryTableViewController.h"
-#import "AddCategoryViewController.h"
 
-@interface CategoryTableViewController ()
+@interface RootViewController ()
 
 @end
 
-@implementation CategoryTableViewController
-
+@implementation RootViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -28,15 +30,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"Category";
-      
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStyleBordered target:self.navigationController action:@selector(toggleMenu)];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-//    self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addCategory:)];
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,25 +45,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)addCategory:(id)sender {
-    AddCategoryViewController *AddCategoryVC = [[AddCategoryViewController alloc] initWithNibName:nil bundle:nil];
-    [self.navigationController pushViewController:AddCategoryVC animated:NO];
-}
 #pragma mark - Table view data source
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-//#warning Potentially incomplete method implementation.
-//    // Return the number of sections.
-//    return 0;
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//#warning Incomplete method implementation.
-//    // Return the number of rows in the section.
-//    return 0;
-//}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return 0;
+}
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
