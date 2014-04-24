@@ -11,6 +11,6 @@
 
 @interface CategoryTableViewController : RootViewController
 
-- (void) addCategory:(id)sender;
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue;
 
 @end

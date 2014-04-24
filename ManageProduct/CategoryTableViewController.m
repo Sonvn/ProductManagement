@@ -15,6 +15,10 @@
 
 @implementation CategoryTableViewController
 
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue{
+    
+}
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

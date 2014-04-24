@@ -12,4 +12,6 @@
 
 @interface ProviderTableViewController : RootViewController
 
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue;
+
 @end
