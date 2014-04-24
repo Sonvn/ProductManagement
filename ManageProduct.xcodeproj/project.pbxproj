@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		4585550313394A6891AC7293 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E57E3AE468BE4DEDA9669FE7 /* libPods.a */; };
 		483FEE8519067E7700B23141 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 483FEE8419067E7700B23141 /* CategoryTableViewController.m */; };
+		48CAB7AD19091E2E001B79A7 /* Provider_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CAB7AC19091E2E001B79A7 /* Provider_Category.m */; };
+		48CAB7B419091EC6001B79A7 /* MyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CAB7AF19091EC6001B79A7 /* MyCategory.m */; };
+		48CAB7B519091EC6001B79A7 /* MyProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CAB7B119091EC6001B79A7 /* MyProduct.m */; };
+		48CAB7B619091EC6001B79A7 /* MyProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CAB7B319091EC6001B79A7 /* MyProvider.m */; };
 		666C0C4F190503B800260977 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666C0C4E190503B800260977 /* Foundation.framework */; };
 		666C0C51190503B800260977 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666C0C50190503B800260977 /* CoreGraphics.framework */; };
 		666C0C53190503B800260977 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666C0C52190503B800260977 /* UIKit.framework */; };
@@ -74,6 +78,14 @@
 		36F989C81E8042ED98A74A54 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		483FEE8319067E7700B23141 /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
 		483FEE8419067E7700B23141 /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
+		48CAB7AB19091E2E001B79A7 /* Provider_Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Provider_Category.h; sourceTree = "<group>"; };
+		48CAB7AC19091E2E001B79A7 /* Provider_Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Provider_Category.m; sourceTree = "<group>"; };
+		48CAB7AE19091EC6001B79A7 /* MyCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCategory.h; sourceTree = "<group>"; };
+		48CAB7AF19091EC6001B79A7 /* MyCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCategory.m; sourceTree = "<group>"; };
+		48CAB7B019091EC6001B79A7 /* MyProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProduct.h; sourceTree = "<group>"; };
+		48CAB7B119091EC6001B79A7 /* MyProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProduct.m; sourceTree = "<group>"; };
+		48CAB7B219091EC6001B79A7 /* MyProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProvider.h; sourceTree = "<group>"; };
+		48CAB7B319091EC6001B79A7 /* MyProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProvider.m; sourceTree = "<group>"; };
 		666C0C4B190503B800260977 /* ManageProduct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManageProduct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		666C0C4E190503B800260977 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		666C0C50190503B800260977 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -227,8 +239,16 @@
 				483FEE8419067E7700B23141 /* CategoryTableViewController.m */,
 				666C0C65190503B800260977 /* Images.xcassets */,
 				666C0C62190503B800260977 /* ManageProduct.xcdatamodeld */,
+				48CAB7AE19091EC6001B79A7 /* MyCategory.h */,
+				48CAB7AF19091EC6001B79A7 /* MyCategory.m */,
+				48CAB7B019091EC6001B79A7 /* MyProduct.h */,
+				48CAB7B119091EC6001B79A7 /* MyProduct.m */,
+				48CAB7B219091EC6001B79A7 /* MyProvider.h */,
+				48CAB7B319091EC6001B79A7 /* MyProvider.m */,
 				66CEB7531906D0DF00E76CD6 /* NavigationViewController.h */,
 				66CEB7541906D0DF00E76CD6 /* NavigationViewController.m */,
+				48CAB7AB19091E2E001B79A7 /* Provider_Category.h */,
+				48CAB7AC19091E2E001B79A7 /* Provider_Category.m */,
 				66CEB7621906E53E00E76CD6 /* ProviderTableViewController.h */,
 				66CEB7631906E53E00E76CD6 /* ProviderTableViewController.m */,
 				669F0769190916B40085BE94 /* ProductTableViewController.h */,
@@ -478,12 +498,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48CAB7AD19091E2E001B79A7 /* Provider_Category.m in Sources */,
 				66CEB7101906B05200E76CD6 /* REMenu.m in Sources */,
 				66CEB7271906B07D00E76CD6 /* SWLongPressGestureRecognizer.m in Sources */,
 				669F0768190907BE0085BE94 /* AddProviderViewController.m in Sources */,
 				66CEB7581906D74A00E76CD6 /* AccessKey.m in Sources */,
 				66CEB72A1906B07D00E76CD6 /* SWUtilityButtonView.m in Sources */,
 				66CEB7121906B05200E76CD6 /* REMenuItem.m in Sources */,
+				48CAB7B519091EC6001B79A7 /* MyProduct.m in Sources */,
 				66CEB7241906B07D00E76CD6 /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				66CEB7111906B05200E76CD6 /* REMenuContainerView.m in Sources */,
 				66CEB75E1906DAD400E76CD6 /* RootViewController.m in Sources */,
@@ -497,7 +519,9 @@
 				483FEE8519067E7700B23141 /* CategoryTableViewController.m in Sources */,
 				66CEB7281906B07D00E76CD6 /* SWTableViewCell.m in Sources */,
 				66CEB7131906B05200E76CD6 /* REMenuItemView.m in Sources */,
+				48CAB7B419091EC6001B79A7 /* MyCategory.m in Sources */,
 				66E52FBA19073DD70011AE62 /* AddCategoryViewController.m in Sources */,
+				48CAB7B619091EC6001B79A7 /* MyProvider.m in Sources */,
 				666C0C64190503B800260977 /* ManageProduct.xcdatamodeld in Sources */,
 				66CEB7641906E53E00E76CD6 /* ProviderTableViewController.m in Sources */,
 				669F076E190917740085BE94 /* AddProductViewController.m in Sources */,

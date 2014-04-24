@@ -1,0 +1,21 @@
+//
+//  Category.m
+//  ManageProduct
+//
+//  Created by Ngọc Nguyên on 4/24/14.
+//  Copyright (c) 2014 MAC. All rights reserved.
+//
+
+#import "MyCategory.h"
+#import "MyProduct.h"
+#import "Provider_Category.h"
+
+
+@implementation MyCategory
+
+@dynamic category_id;
+@dynamic category_name;
+@dynamic with_product;
+@dynamic with_provider_category;
+
+@end
