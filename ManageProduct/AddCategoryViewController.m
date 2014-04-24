@@ -9,7 +9,12 @@
 #import "AddCategoryViewController.h"
 #import "CategoryTableViewController.h"
 
+#import "MyCategory.h"
+#import "AppDelegate.h"
+
 @interface AddCategoryViewController ()
+
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @end
 
@@ -27,7 +32,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view    
+    // Do any additional setup after loading the view
+    //1
+    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    //2
+    self.managedObjectContext = appDelegate.managedObjectContext;
 }
 
 - (void)didReceiveMemoryWarning

@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C64" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Category" syncable="YES">
+    <entity name="MyCategory" representedClassName="MyCategory" syncable="YES">
         <attribute name="category_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="category_name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="with_product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="with_category" inverseEntity="Product" syncable="YES"/>
+        <relationship name="with_product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MyProduct" inverseName="with_category" inverseEntity="MyProduct" syncable="YES"/>
         <relationship name="with_provider_category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Provider_Category" inverseName="with_category" inverseEntity="Provider_Category" syncable="YES"/>
     </entity>
-    <entity name="Product" syncable="YES">
+    <entity name="MyProduct" representedClassName="MyProduct" syncable="YES">
         <attribute name="product_category" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="product_decription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="product_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="product_image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="product_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="product_provider" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="with_category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="with_product" inverseEntity="Category" syncable="YES"/>
-        <relationship name="with_provider" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Provider" inverseName="with_product" inverseEntity="Provider" syncable="YES"/>
+        <relationship name="with_category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MyCategory" inverseName="with_product" inverseEntity="MyCategory" syncable="YES"/>
+        <relationship name="with_provider" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MyProvider" inverseName="with_product" inverseEntity="MyProvider" syncable="YES"/>
     </entity>
-    <entity name="Provider" syncable="YES">
+    <entity name="MyProvider" representedClassName="MyProvider" syncable="YES">
         <attribute name="provider_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="provider_name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="with_product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="with_provider" inverseEntity="Product" syncable="YES"/>
+        <relationship name="with_product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MyProduct" inverseName="with_provider" inverseEntity="MyProduct" syncable="YES"/>
         <relationship name="with_provider_category" optional="YES" maxCount="1" deletionRule="Deny" destinationEntity="Provider_Category" inverseName="with_provider" inverseEntity="Provider_Category" syncable="YES"/>
     </entity>
-    <entity name="Provider_Category" syncable="YES">
+    <entity name="Provider_Category" representedClassName="Provider_Category" syncable="YES">
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id_category" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="id_product" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <relationship name="with_category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="with_provider_category" inverseEntity="Category" syncable="YES"/>
-        <relationship name="with_provider" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Provider" inverseName="with_provider_category" inverseEntity="Provider" syncable="YES"/>
+        <relationship name="with_category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MyCategory" inverseName="with_provider_category" inverseEntity="MyCategory" syncable="YES"/>
+        <relationship name="with_provider" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MyProvider" inverseName="with_provider_category" inverseEntity="MyProvider" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Category" positionX="-666" positionY="-270" width="128" height="103"/>
-        <element name="Product" positionX="-461" positionY="-153" width="128" height="163"/>
-        <element name="Provider" positionX="-263" positionY="-265" width="128" height="103"/>
+        <element name="MyCategory" positionX="-666" positionY="-270" width="128" height="103"/>
+        <element name="MyProduct" positionX="-461" positionY="-153" width="128" height="163"/>
+        <element name="MyProvider" positionX="-263" positionY="-265" width="128" height="103"/>
         <element name="Provider_Category" positionX="-477" positionY="-333" width="128" height="118"/>
     </elements>
 </model>
