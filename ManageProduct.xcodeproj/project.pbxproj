@@ -26,6 +26,8 @@
 		666C0C7A190503B900260977 /* ManageProductTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 666C0C79190503B900260977 /* ManageProductTests.m */; };
 		666C0C841905105E00260977 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666C0C831905105D00260977 /* Storyboard.storyboard */; };
 		669F0768190907BE0085BE94 /* AddProviderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 669F0767190907BE0085BE94 /* AddProviderViewController.m */; };
+		669F076B190916B40085BE94 /* ProductTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 669F076A190916B40085BE94 /* ProductTableViewController.m */; };
+		669F076E190917740085BE94 /* AddProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 669F076D190917740085BE94 /* AddProductViewController.m */; };
 		66CEB7031906A51300E76CD6 /* setting-icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 66CEB7021906A51300E76CD6 /* setting-icon1.png */; };
 		66CEB70F1906B05200E76CD6 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CEB7061906B05200E76CD6 /* RECommonFunctions.m */; };
 		66CEB7101906B05200E76CD6 /* REMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CEB7081906B05200E76CD6 /* REMenu.m */; };
@@ -93,6 +95,10 @@
 		666C0C831905105D00260977 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		669F0766190907BE0085BE94 /* AddProviderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddProviderViewController.h; sourceTree = "<group>"; };
 		669F0767190907BE0085BE94 /* AddProviderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddProviderViewController.m; sourceTree = "<group>"; };
+		669F0769190916B40085BE94 /* ProductTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTableViewController.h; sourceTree = "<group>"; };
+		669F076A190916B40085BE94 /* ProductTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductTableViewController.m; sourceTree = "<group>"; };
+		669F076C190917740085BE94 /* AddProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddProductViewController.h; sourceTree = "<group>"; };
+		669F076D190917740085BE94 /* AddProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddProductViewController.m; sourceTree = "<group>"; };
 		66CEB7021906A51300E76CD6 /* setting-icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting-icon1.png"; sourceTree = SOURCE_ROOT; };
 		66CEB7051906B05200E76CD6 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		66CEB7061906B05200E76CD6 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
@@ -225,10 +231,14 @@
 				66CEB7541906D0DF00E76CD6 /* NavigationViewController.m */,
 				66CEB7621906E53E00E76CD6 /* ProviderTableViewController.h */,
 				66CEB7631906E53E00E76CD6 /* ProviderTableViewController.m */,
+				669F0769190916B40085BE94 /* ProductTableViewController.h */,
+				669F076A190916B40085BE94 /* ProductTableViewController.m */,
 				66CEB75C1906DAD400E76CD6 /* RootViewController.h */,
 				66CEB75D1906DAD400E76CD6 /* RootViewController.m */,
 				666C0C831905105D00260977 /* Storyboard.storyboard */,
 				666C0C57190503B800260977 /* Supporting Files */,
+				669F076C190917740085BE94 /* AddProductViewController.h */,
+				669F076D190917740085BE94 /* AddProductViewController.m */,
 			);
 			path = ManageProduct;
 			sourceTree = "<group>";
@@ -482,6 +492,7 @@
 				66CEB70F1906B05200E76CD6 /* RECommonFunctions.m in Sources */,
 				666C0C61190503B800260977 /* AppDelegate.m in Sources */,
 				66CEB7261906B07D00E76CD6 /* SWCellScrollView.m in Sources */,
+				669F076B190916B40085BE94 /* ProductTableViewController.m in Sources */,
 				66CEB7251906B07D00E76CD6 /* RMSwipeTableViewCell.m in Sources */,
 				483FEE8519067E7700B23141 /* CategoryTableViewController.m in Sources */,
 				66CEB7281906B07D00E76CD6 /* SWTableViewCell.m in Sources */,
@@ -489,6 +500,7 @@
 				66E52FBA19073DD70011AE62 /* AddCategoryViewController.m in Sources */,
 				666C0C64190503B800260977 /* ManageProduct.xcdatamodeld in Sources */,
 				66CEB7641906E53E00E76CD6 /* ProviderTableViewController.m in Sources */,
+				669F076E190917740085BE94 /* AddProductViewController.m in Sources */,
 				666C0C5D190503B800260977 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,6 +10,8 @@
 
 @interface AccessKey : NSObject
 
-//@property (strong, readonly) nss
+FOUNDATION_EXPORT NSString *const accessKey;
+//   BOOL editable = false;
+//}
 
 @end

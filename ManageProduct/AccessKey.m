@@ -11,3 +11,5 @@
 @implementation AccessKey
 
 @end
+
+NSString *const accessKey = @"admin";

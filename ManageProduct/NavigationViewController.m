@@ -13,6 +13,7 @@
 #import "AccessKey.h"
 #import "CategoryTableViewController.h"
 #import "ProviderTableViewController.h"
+#import "ProductTableViewController.h"
 
 @interface NavigationViewController ()
 
@@ -47,6 +48,13 @@
                                                                 ProviderTableViewController *controller =[self.storyboard instantiateViewControllerWithIdentifier:@"provider"];
                                                              [weakSelf setViewControllers:@[controller] animated:NO];
                                                          }];
+    REMenuItem *productItem = [[REMenuItem alloc] initWithTitle:@"Product"
+                                                           image:[UIImage imageNamed:@"Icon_Explore"]
+                                                highlightedImage:nil
+                                                          action:^(REMenuItem *item) {
+                                                              ProductTableViewController *controller =[self.storyboard instantiateViewControllerWithIdentifier:@"products"];
+                                                              [weakSelf setViewControllers:@[controller] animated:YES];
+                                                          }];
     
     REMenuItem *accessKeyItem = [[REMenuItem alloc] initWithTitle:@"Access Key"
                                                            image:[UIImage imageNamed:@"Icon_Activity"]
@@ -75,8 +83,9 @@
     categoryItem.tag = 0;
     providerItem.tag = 1;
     accessKeyItem.tag = 2;
+    productItem.tag = 3;
     
-    self.menu = [[REMenu alloc] initWithItems:@[categoryItem, providerItem, accessKeyItem]];
+    self.menu = [[REMenu alloc] initWithItems:@[categoryItem, providerItem, productItem, accessKeyItem]];
     
     // Background view
     //
@@ -119,10 +128,21 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     NSString *result = [[alertView textFieldAtIndex:0] text];
-    NSLog(@"Enter: %@", result);
-    if (result.length <= 0 || buttonIndex == 0) {
+    if (buttonIndex == 0) {
         return;
     }
+    if (result.length <= 0) {
+        UIAlertView *sucess = [[UIAlertView alloc]initWithTitle:@"not space" message:@"" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles: nil];
+        [sucess show];
+    } else if ([result  isEqual: accessKey]){
+        UIAlertView *sucess = [[UIAlertView alloc]initWithTitle:@"enable edit" message:@"" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles: nil];
+        //edit = true;
+        [sucess show];
+    } else {
+        UIAlertView *sucess = [[UIAlertView alloc]initWithTitle:@"wrong access key" message:@"" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles: nil];
+        [sucess show];
+    }
+    
     
     
 }
