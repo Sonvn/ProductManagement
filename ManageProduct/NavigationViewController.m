@@ -12,7 +12,6 @@
 #import "NavigationViewController.h"
 #import "AccessKey.h"
 #import "CategoryTableViewController.h"
-#import "ProductTableViewController.h"
 #import "ProviderTableViewController.h"
 
 @interface NavigationViewController ()

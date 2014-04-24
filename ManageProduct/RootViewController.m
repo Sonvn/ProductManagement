@@ -8,7 +8,6 @@
 
 #import "RootViewController.h"
 #import "NavigationViewController.h"
-#import "ProductTableViewController.h"
 #import "ProviderTableViewController.h"
 #import "CategoryTableViewController.h"
 

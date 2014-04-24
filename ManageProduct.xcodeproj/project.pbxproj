@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4585550313394A6891AC7293 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E57E3AE468BE4DEDA9669FE7 /* libPods.a */; };
 		483FEE8519067E7700B23141 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 483FEE8419067E7700B23141 /* CategoryTableViewController.m */; };
-		483FEE8819067F6900B23141 /* ProductTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 483FEE8719067F6900B23141 /* ProductTableViewController.m */; };
 		666C0C4F190503B800260977 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666C0C4E190503B800260977 /* Foundation.framework */; };
 		666C0C51190503B800260977 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666C0C50190503B800260977 /* CoreGraphics.framework */; };
 		666C0C53190503B800260977 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666C0C52190503B800260977 /* UIKit.framework */; };
@@ -26,6 +25,7 @@
 		666C0C78190503B900260977 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 666C0C76190503B900260977 /* InfoPlist.strings */; };
 		666C0C7A190503B900260977 /* ManageProductTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 666C0C79190503B900260977 /* ManageProductTests.m */; };
 		666C0C841905105E00260977 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666C0C831905105D00260977 /* Storyboard.storyboard */; };
+		669F0768190907BE0085BE94 /* AddProviderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 669F0767190907BE0085BE94 /* AddProviderViewController.m */; };
 		66CEB7031906A51300E76CD6 /* setting-icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 66CEB7021906A51300E76CD6 /* setting-icon1.png */; };
 		66CEB70F1906B05200E76CD6 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CEB7061906B05200E76CD6 /* RECommonFunctions.m */; };
 		66CEB7101906B05200E76CD6 /* REMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CEB7081906B05200E76CD6 /* REMenu.m */; };
@@ -72,8 +72,6 @@
 		36F989C81E8042ED98A74A54 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		483FEE8319067E7700B23141 /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
 		483FEE8419067E7700B23141 /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
-		483FEE8619067F6900B23141 /* ProductTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTableViewController.h; sourceTree = "<group>"; };
-		483FEE8719067F6900B23141 /* ProductTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductTableViewController.m; sourceTree = "<group>"; };
 		666C0C4B190503B800260977 /* ManageProduct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManageProduct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		666C0C4E190503B800260977 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		666C0C50190503B800260977 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -93,6 +91,8 @@
 		666C0C77190503B900260977 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		666C0C79190503B900260977 /* ManageProductTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManageProductTests.m; sourceTree = "<group>"; };
 		666C0C831905105D00260977 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		669F0766190907BE0085BE94 /* AddProviderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddProviderViewController.h; sourceTree = "<group>"; };
+		669F0767190907BE0085BE94 /* AddProviderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddProviderViewController.m; sourceTree = "<group>"; };
 		66CEB7021906A51300E76CD6 /* setting-icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting-icon1.png"; sourceTree = SOURCE_ROOT; };
 		66CEB7051906B05200E76CD6 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		66CEB7061906B05200E76CD6 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
@@ -222,10 +222,10 @@
 				66CEB7631906E53E00E76CD6 /* ProviderTableViewController.m */,
 				483FEE8319067E7700B23141 /* CategoryTableViewController.h */,
 				483FEE8419067E7700B23141 /* CategoryTableViewController.m */,
-				483FEE8619067F6900B23141 /* ProductTableViewController.h */,
-				483FEE8719067F6900B23141 /* ProductTableViewController.m */,
 				66E52FB819073DD70011AE62 /* AddCategoryViewController.h */,
 				66E52FB919073DD70011AE62 /* AddCategoryViewController.m */,
+				669F0766190907BE0085BE94 /* AddProviderViewController.h */,
+				669F0767190907BE0085BE94 /* AddProviderViewController.m */,
 				66CEB7561906D74A00E76CD6 /* AccessKey.h */,
 				66CEB7571906D74A00E76CD6 /* AccessKey.m */,
 				666C0C57190503B800260977 /* Supporting Files */,
@@ -470,7 +470,7 @@
 			files = (
 				66CEB7101906B05200E76CD6 /* REMenu.m in Sources */,
 				66CEB7271906B07D00E76CD6 /* SWLongPressGestureRecognizer.m in Sources */,
-				483FEE8819067F6900B23141 /* ProductTableViewController.m in Sources */,
+				669F0768190907BE0085BE94 /* AddProviderViewController.m in Sources */,
 				66CEB7581906D74A00E76CD6 /* AccessKey.m in Sources */,
 				66CEB72A1906B07D00E76CD6 /* SWUtilityButtonView.m in Sources */,
 				66CEB7121906B05200E76CD6 /* REMenuItem.m in Sources */,
