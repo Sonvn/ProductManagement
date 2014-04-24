@@ -38,15 +38,14 @@
     REMenuItem *categoryItem = [[REMenuItem alloc] initWithTitle:@"Category"
                                                        image:[UIImage imageNamed:@"Icon_Home"]
                                             highlightedImage:nil
-                                                      action:^(REMenuItem *item) {
-                                                          CategoryTableViewController *controller = [[CategoryTableViewController alloc] init];                                                     [weakSelf setViewControllers:@[controller] animated:NO];
-                                                      }];
+                                                      action:^(REMenuItem *item) {                                                          CategoryTableViewController *category = [self.storyboard instantiateViewControllerWithIdentifier:@"category"];
+                                                           [weakSelf setViewControllers:@[category] animated:NO];                                                      }];
     
     REMenuItem *providerItem = [[REMenuItem alloc] initWithTitle:@"Provider"
                                                           image:[UIImage imageNamed:@"Icon_Explore"]
                                                highlightedImage:nil
                                                          action:^(REMenuItem *item) {
-                                                                ProviderTableViewController *controller =[[ProviderTableViewController alloc] init];
+                                                                ProviderTableViewController *controller =[self.storyboard instantiateViewControllerWithIdentifier:@"provider"];
                                                              [weakSelf setViewControllers:@[controller] animated:NO];
                                                          }];
     
