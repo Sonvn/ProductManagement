@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="LS5-AR-A2A">
     <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
@@ -13,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Rwo-rB-sFN">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ListCategoriesCell" id="Rwo-rB-sFN">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rwo-rB-sFN" id="E2O-kA-h4e">
@@ -262,12 +263,12 @@
                                     <navigationItem title="Title" id="WBS-x8-cmu">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="70k-cc-Dcg">
                                             <connections>
-                                                <action selector="cancel:" destination="Gum-Zm-atQ" id="ac4-me-wcp"/>
+                                                <action selector="cancel:" destination="Gum-Zm-atQ" id="50h-E2-zsO"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Save" id="gZN-jh-MhL">
                                             <connections>
-                                                <action selector="save:" destination="Gum-Zm-atQ" id="HHq-Sr-tOf"/>
+                                                <action selector="save:" destination="Gum-Zm-atQ" id="ztp-zI-F10"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -292,6 +293,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="categoryNameTextField" destination="gIu-Dd-Wh5" id="DR7-4A-DS8"/>
+                        <outlet property="nameTextField" destination="gIu-Dd-Wh5" id="5AG-Bo-xLU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zKE-n6-S9e" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -506,7 +508,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="3QB-a0-Gqq"/>
+        <segue reference="Iwa-55-PAQ"/>
         <segue reference="puj-al-5oT"/>
     </inferredMetricsTieBreakers>
 </document>
