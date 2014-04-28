@@ -11,6 +11,4 @@
 
 @interface ProductTableViewController : RootViewController
 
-- (IBAction)unwindToList:(UIStoryboardSegue *)segue;
-
 @end

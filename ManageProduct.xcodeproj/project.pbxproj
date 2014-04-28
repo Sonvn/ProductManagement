@@ -13,6 +13,9 @@
 		48CAB7B419091EC6001B79A7 /* MyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CAB7AF19091EC6001B79A7 /* MyCategory.m */; };
 		48CAB7B519091EC6001B79A7 /* MyProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CAB7B119091EC6001B79A7 /* MyProduct.m */; };
 		48CAB7B619091EC6001B79A7 /* MyProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CAB7B319091EC6001B79A7 /* MyProvider.m */; };
+		6657AC301909664A00775AA3 /* DetailProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6657AC2F1909664A00775AA3 /* DetailProductViewController.m */; };
+		6657AC371909713800775AA3 /* add_camera_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6657AC351909713800775AA3 /* add_camera_icon.png */; };
+		6657AC381909713800775AA3 /* add_camera_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6657AC361909713800775AA3 /* add_camera_icon@2x.png */; };
 		666C0C4F190503B800260977 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666C0C4E190503B800260977 /* Foundation.framework */; };
 		666C0C51190503B800260977 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666C0C50190503B800260977 /* CoreGraphics.framework */; };
 		666C0C53190503B800260977 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666C0C52190503B800260977 /* UIKit.framework */; };
@@ -86,6 +89,10 @@
 		48CAB7B119091EC6001B79A7 /* MyProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProduct.m; sourceTree = "<group>"; };
 		48CAB7B219091EC6001B79A7 /* MyProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProvider.h; sourceTree = "<group>"; };
 		48CAB7B319091EC6001B79A7 /* MyProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProvider.m; sourceTree = "<group>"; };
+		6657AC2E1909664A00775AA3 /* DetailProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailProductViewController.h; sourceTree = "<group>"; };
+		6657AC2F1909664A00775AA3 /* DetailProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailProductViewController.m; sourceTree = "<group>"; };
+		6657AC351909713800775AA3 /* add_camera_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_camera_icon.png; sourceTree = "<group>"; };
+		6657AC361909713800775AA3 /* add_camera_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_camera_icon@2x.png"; sourceTree = "<group>"; };
 		666C0C4B190503B800260977 /* ManageProduct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManageProduct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		666C0C4E190503B800260977 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		666C0C50190503B800260977 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -189,6 +196,81 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6657AC2C19094CEF00775AA3 /* AddItem */ = {
+			isa = PBXGroup;
+			children = (
+				669F076C190917740085BE94 /* AddProductViewController.h */,
+				669F076D190917740085BE94 /* AddProductViewController.m */,
+				66E52FB819073DD70011AE62 /* AddCategoryViewController.h */,
+				66E52FB919073DD70011AE62 /* AddCategoryViewController.m */,
+				669F0766190907BE0085BE94 /* AddProviderViewController.h */,
+				669F0767190907BE0085BE94 /* AddProviderViewController.m */,
+			);
+			name = AddItem;
+			sourceTree = "<group>";
+		};
+		6657AC2D19094D0700775AA3 /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				483FEE8319067E7700B23141 /* CategoryTableViewController.h */,
+				483FEE8419067E7700B23141 /* CategoryTableViewController.m */,
+				66CEB7621906E53E00E76CD6 /* ProviderTableViewController.h */,
+				66CEB7631906E53E00E76CD6 /* ProviderTableViewController.m */,
+				669F0769190916B40085BE94 /* ProductTableViewController.h */,
+				669F076A190916B40085BE94 /* ProductTableViewController.m */,
+				66CEB75C1906DAD400E76CD6 /* RootViewController.h */,
+				66CEB75D1906DAD400E76CD6 /* RootViewController.m */,
+				66CEB7531906D0DF00E76CD6 /* NavigationViewController.h */,
+				66CEB7541906D0DF00E76CD6 /* NavigationViewController.m */,
+			);
+			name = ListView;
+			sourceTree = "<group>";
+		};
+		6657AC311909665000775AA3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6657AC321909666500775AA3 /* Detail */,
+				6657AC2C19094CEF00775AA3 /* AddItem */,
+				6657AC2D19094D0700775AA3 /* ListView */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		6657AC321909666500775AA3 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				6657AC2E1909664A00775AA3 /* DetailProductViewController.h */,
+				6657AC2F1909664A00775AA3 /* DetailProductViewController.m */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		6657AC331909670500775AA3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				66CEB7561906D74A00E76CD6 /* AccessKey.h */,
+				66CEB7571906D74A00E76CD6 /* AccessKey.m */,
+				666C0C62190503B800260977 /* ManageProduct.xcdatamodeld */,
+				6657AC341909670D00775AA3 /* Entities */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		6657AC341909670D00775AA3 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				48CAB7AE19091EC6001B79A7 /* MyCategory.h */,
+				48CAB7AF19091EC6001B79A7 /* MyCategory.m */,
+				48CAB7B019091EC6001B79A7 /* MyProduct.h */,
+				48CAB7B119091EC6001B79A7 /* MyProduct.m */,
+				48CAB7B219091EC6001B79A7 /* MyProvider.h */,
+				48CAB7B319091EC6001B79A7 /* MyProvider.m */,
+				48CAB7AB19091E2E001B79A7 /* Provider_Category.h */,
+				48CAB7AC19091E2E001B79A7 /* Provider_Category.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
 		666C0C42190503B800260977 = {
 			isa = PBXGroup;
 			children = (
@@ -227,38 +309,13 @@
 		666C0C56190503B800260977 /* ManageProduct */ = {
 			isa = PBXGroup;
 			children = (
-				66CEB7561906D74A00E76CD6 /* AccessKey.h */,
-				66CEB7571906D74A00E76CD6 /* AccessKey.m */,
-				66E52FB819073DD70011AE62 /* AddCategoryViewController.h */,
-				66E52FB919073DD70011AE62 /* AddCategoryViewController.m */,
-				669F0766190907BE0085BE94 /* AddProviderViewController.h */,
-				669F0767190907BE0085BE94 /* AddProviderViewController.m */,
+				6657AC331909670500775AA3 /* Data */,
+				6657AC311909665000775AA3 /* Controller */,
 				666C0C5F190503B800260977 /* AppDelegate.h */,
 				666C0C60190503B800260977 /* AppDelegate.m */,
-				483FEE8319067E7700B23141 /* CategoryTableViewController.h */,
-				483FEE8419067E7700B23141 /* CategoryTableViewController.m */,
 				666C0C65190503B800260977 /* Images.xcassets */,
-				666C0C62190503B800260977 /* ManageProduct.xcdatamodeld */,
-				48CAB7AE19091EC6001B79A7 /* MyCategory.h */,
-				48CAB7AF19091EC6001B79A7 /* MyCategory.m */,
-				48CAB7B019091EC6001B79A7 /* MyProduct.h */,
-				48CAB7B119091EC6001B79A7 /* MyProduct.m */,
-				48CAB7B219091EC6001B79A7 /* MyProvider.h */,
-				48CAB7B319091EC6001B79A7 /* MyProvider.m */,
-				66CEB7531906D0DF00E76CD6 /* NavigationViewController.h */,
-				66CEB7541906D0DF00E76CD6 /* NavigationViewController.m */,
-				48CAB7AB19091E2E001B79A7 /* Provider_Category.h */,
-				48CAB7AC19091E2E001B79A7 /* Provider_Category.m */,
-				66CEB7621906E53E00E76CD6 /* ProviderTableViewController.h */,
-				66CEB7631906E53E00E76CD6 /* ProviderTableViewController.m */,
-				669F0769190916B40085BE94 /* ProductTableViewController.h */,
-				669F076A190916B40085BE94 /* ProductTableViewController.m */,
-				66CEB75C1906DAD400E76CD6 /* RootViewController.h */,
-				66CEB75D1906DAD400E76CD6 /* RootViewController.m */,
 				666C0C831905105D00260977 /* Storyboard.storyboard */,
 				666C0C57190503B800260977 /* Supporting Files */,
-				669F076C190917740085BE94 /* AddProductViewController.h */,
-				669F076D190917740085BE94 /* AddProductViewController.m */,
 			);
 			path = ManageProduct;
 			sourceTree = "<group>";
@@ -337,6 +394,8 @@
 		66CEB72E1906B2B900E76CD6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6657AC351909713800775AA3 /* add_camera_icon.png */,
+				6657AC361909713800775AA3 /* add_camera_icon@2x.png */,
 				66CEB72F1906B2D200E76CD6 /* Balloon@2x.png */,
 				66CEB7301906B2D200E76CD6 /* Default-568h@2x.png */,
 				66CEB7311906B2D200E76CD6 /* Default.png */,
@@ -432,6 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66CEB7441906B2D200E76CD6 /* Icon_Home@2x.png in Resources */,
+				6657AC371909713800775AA3 /* add_camera_icon.png in Resources */,
 				66CEB73E1906B2D200E76CD6 /* Default@2x.png in Resources */,
 				66CEB73F1906B2D200E76CD6 /* Icon_Activity.png in Resources */,
 				666C0C5B190503B800260977 /* InfoPlist.strings in Resources */,
@@ -444,6 +504,7 @@
 				666C0C66190503B800260977 /* Images.xcassets in Resources */,
 				66CEB7401906B2D200E76CD6 /* Icon_Activity@2x.png in Resources */,
 				66CEB73D1906B2D200E76CD6 /* Default.png in Resources */,
+				6657AC381909713800775AA3 /* add_camera_icon@2x.png in Resources */,
 				66CEB7431906B2D200E76CD6 /* Icon_Home.png in Resources */,
 				666C0C841905105E00260977 /* Storyboard.storyboard in Resources */,
 				66CEB73C1906B2D200E76CD6 /* Default-568h@2x.png in Resources */,
@@ -522,6 +583,7 @@
 				48CAB7B419091EC6001B79A7 /* MyCategory.m in Sources */,
 				66E52FBA19073DD70011AE62 /* AddCategoryViewController.m in Sources */,
 				48CAB7B619091EC6001B79A7 /* MyProvider.m in Sources */,
+				6657AC301909664A00775AA3 /* DetailProductViewController.m in Sources */,
 				666C0C64190503B800260977 /* ManageProduct.xcdatamodeld in Sources */,
 				66CEB7641906E53E00E76CD6 /* ProviderTableViewController.m in Sources */,
 				669F076E190917740085BE94 /* AddProductViewController.m in Sources */,

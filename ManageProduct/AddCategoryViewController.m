@@ -20,6 +20,15 @@
 
 @implementation AddCategoryViewController
 
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -33,10 +42,21 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view
-    //1
-    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
-    //2
-    self.managedObjectContext = appDelegate.managedObjectContext;
+}
+
+- (IBAction)save:(id)sender {
+    NSManagedObjectContext *context = [self managedObjectContext];
+
+        // Create a new device
+        NSManagedObject *category = [NSEntityDescription insertNewObjectForEntityForName:@"MyCategory" inManagedObjectContext:context];
+        [category setValue:self.categoryIdTextField.text forKey:@"category_name"];
+        [category setValue:self.categoryIdTextField.text forKey:@"category_id"];
+    // Save the object to persistent store
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)cancel:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

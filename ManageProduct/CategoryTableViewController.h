@@ -11,6 +11,4 @@
 
 @interface CategoryTableViewController : RootViewController
 
-- (IBAction)unwindToList:(UIStoryboardSegue *)segue;
-
 @end

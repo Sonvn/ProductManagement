@@ -10,4 +10,10 @@
 
 @interface AddProviderViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *providerNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *providerIdTextField;
+
+- (IBAction)save:(id)sender;
+- (IBAction)cancel:(id)sender;
+
 @end

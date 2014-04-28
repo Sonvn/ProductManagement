@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddProductViewController : UIViewController
+@interface AddProductViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *productNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *categoryProductTextField;
+@property (weak, nonatomic) IBOutlet UITextField *providerProductTextField;
+@property (weak, nonatomic) IBOutlet UIImageView *productImageView;
+@property (strong, nonatomic) NSManagedObject *product;
+- (IBAction)save:(id)sender;
+- (IBAction)cancel:(id)sender;
+- (IBAction)takePhoto:  (UIButton *)sender;
+- (IBAction)selectPhoto:(UIButton *)sender;
+
 
 @end
