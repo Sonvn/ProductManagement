@@ -74,7 +74,7 @@
         
     } else {
         // Create a new device
-        NSManagedObject *newDevice = [NSEntityDescription insertNewObjectForEntityForName:@"MyProduct" inManagedObjectContext:context];
+        NSManagedObject *newDevice = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:context];
         [newDevice setValue:self.productNameTextField.text forKey:@"product_name"];
         [newDevice setValue:self.providerProductTextField.text forKey:@"product_provider"];
         [newDevice setValue:self.categoryProductTextField.text forKey:@"product_category"];

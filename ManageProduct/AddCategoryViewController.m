@@ -48,9 +48,8 @@
     NSManagedObjectContext *context = [self managedObjectContext];
 
         // Create a new device
-        NSManagedObject *category = [NSEntityDescription insertNewObjectForEntityForName:@"MyCategory" inManagedObjectContext:context];
-        [category setValue:self.categoryIdTextField.text forKey:@"category_name"];
-        [category setValue:self.categoryIdTextField.text forKey:@"category_id"];
+        NSManagedObject *category = [NSEntityDescription insertNewObjectForEntityForName:@"Category" inManagedObjectContext:context];
+        [category setValue:self.categoryNameTextField.text forKey:@"category_name"];
     // Save the object to persistent store
     [self dismissViewControllerAnimated:YES completion:nil];
 }

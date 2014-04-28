@@ -199,10 +199,10 @@
 		6657AC2C19094CEF00775AA3 /* AddItem */ = {
 			isa = PBXGroup;
 			children = (
-				669F076C190917740085BE94 /* AddProductViewController.h */,
-				669F076D190917740085BE94 /* AddProductViewController.m */,
 				66E52FB819073DD70011AE62 /* AddCategoryViewController.h */,
 				66E52FB919073DD70011AE62 /* AddCategoryViewController.m */,
+				669F076C190917740085BE94 /* AddProductViewController.h */,
+				669F076D190917740085BE94 /* AddProductViewController.m */,
 				669F0766190907BE0085BE94 /* AddProviderViewController.h */,
 				669F0767190907BE0085BE94 /* AddProviderViewController.m */,
 			);
@@ -214,14 +214,14 @@
 			children = (
 				483FEE8319067E7700B23141 /* CategoryTableViewController.h */,
 				483FEE8419067E7700B23141 /* CategoryTableViewController.m */,
-				66CEB7621906E53E00E76CD6 /* ProviderTableViewController.h */,
-				66CEB7631906E53E00E76CD6 /* ProviderTableViewController.m */,
-				669F0769190916B40085BE94 /* ProductTableViewController.h */,
-				669F076A190916B40085BE94 /* ProductTableViewController.m */,
-				66CEB75C1906DAD400E76CD6 /* RootViewController.h */,
-				66CEB75D1906DAD400E76CD6 /* RootViewController.m */,
 				66CEB7531906D0DF00E76CD6 /* NavigationViewController.h */,
 				66CEB7541906D0DF00E76CD6 /* NavigationViewController.m */,
+				669F0769190916B40085BE94 /* ProductTableViewController.h */,
+				669F076A190916B40085BE94 /* ProductTableViewController.m */,
+				66CEB7621906E53E00E76CD6 /* ProviderTableViewController.h */,
+				66CEB7631906E53E00E76CD6 /* ProviderTableViewController.m */,
+				66CEB75C1906DAD400E76CD6 /* RootViewController.h */,
+				66CEB75D1906DAD400E76CD6 /* RootViewController.m */,
 			);
 			name = ListView;
 			sourceTree = "<group>";
@@ -229,8 +229,8 @@
 		6657AC311909665000775AA3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6657AC321909666500775AA3 /* Detail */,
 				6657AC2C19094CEF00775AA3 /* AddItem */,
+				6657AC321909666500775AA3 /* Detail */,
 				6657AC2D19094D0700775AA3 /* ListView */,
 			);
 			name = Controller;
@@ -250,8 +250,8 @@
 			children = (
 				66CEB7561906D74A00E76CD6 /* AccessKey.h */,
 				66CEB7571906D74A00E76CD6 /* AccessKey.m */,
-				666C0C62190503B800260977 /* ManageProduct.xcdatamodeld */,
 				6657AC341909670D00775AA3 /* Entities */,
+				666C0C62190503B800260977 /* ManageProduct.xcdatamodeld */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -261,12 +261,12 @@
 			children = (
 				48FE00B6190EAFF50001190B /* Category_Provider.h */,
 				48FE00B7190EAFF50001190B /* Category_Provider.m */,
-				48FE00B3190EAFF50001190B /* MyProvider.h */,
-				48FE00B4190EAFF50001190B /* MyProvider.m */,
 				48FE00B0190EAFF50001190B /* MyCategory.h */,
 				48FE00B1190EAFF50001190B /* MyCategory.m */,
 				48FE00AD190EAFF50001190B /* MyProduct.h */,
 				48FE00AE190EAFF50001190B /* MyProduct.m */,
+				48FE00B3190EAFF50001190B /* MyProvider.h */,
+				48FE00B4190EAFF50001190B /* MyProvider.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -309,10 +309,10 @@
 		666C0C56190503B800260977 /* ManageProduct */ = {
 			isa = PBXGroup;
 			children = (
-				6657AC331909670500775AA3 /* Data */,
-				6657AC311909665000775AA3 /* Controller */,
 				666C0C5F190503B800260977 /* AppDelegate.h */,
 				666C0C60190503B800260977 /* AppDelegate.m */,
+				6657AC311909665000775AA3 /* Controller */,
+				6657AC331909670500775AA3 /* Data */,
 				666C0C65190503B800260977 /* Images.xcassets */,
 				666C0C831905105D00260977 /* Storyboard.storyboard */,
 				666C0C57190503B800260977 /* Supporting Files */,

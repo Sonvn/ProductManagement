@@ -11,7 +11,6 @@
 @interface AddCategoryViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *categoryNameTextField;
-@property (weak, nonatomic) IBOutlet UITextField *categoryIdTextField;
 
 - (IBAction)save:(id)sender;
 - (IBAction)cancel:(id)sender;

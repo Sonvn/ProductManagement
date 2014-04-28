@@ -35,13 +35,13 @@
     
     __typeof (self) __weak weakSelf = self;
 
-    REMenuItem *categoryItem = [[REMenuItem alloc] initWithTitle:@"Category"
+    REMenuItem *categoryItem = [[REMenuItem alloc] initWithTitle:@"Categories"
                                                        image:[UIImage imageNamed:@"Icon_Home"]
                                             highlightedImage:nil
                                                       action:^(REMenuItem *item) {                                                          CategoryTableViewController *category = [self.storyboard instantiateViewControllerWithIdentifier:@"category"];
                                                            [weakSelf setViewControllers:@[category] animated:YES];                                                      }];
     
-    REMenuItem *providerItem = [[REMenuItem alloc] initWithTitle:@"Provider"
+    REMenuItem *providerItem = [[REMenuItem alloc] initWithTitle:@"Providers"
                                                           image:[UIImage imageNamed:@"Icon_Explore"]
                                                highlightedImage:nil
                                                          action:^(REMenuItem *item) {

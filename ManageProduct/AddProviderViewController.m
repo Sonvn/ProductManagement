@@ -42,9 +42,8 @@
     NSManagedObjectContext *context = [self managedObjectContext];
     
     // Create a new device
-    NSManagedObject *provider = [NSEntityDescription insertNewObjectForEntityForName:@"MyProvider" inManagedObjectContext:context];
+    NSManagedObject *provider = [NSEntityDescription insertNewObjectForEntityForName:@"Provider" inManagedObjectContext:context];
     [provider setValue:self.providerNameTextField.text forKey:@"provider_name"];
-    [provider setValue:self.providerIdTextField.text forKey:@"provider_id"];
     // Save the object to persistent store
     [self dismissViewControllerAnimated:YES completion:nil];
 }

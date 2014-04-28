@@ -49,7 +49,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     NSManagedObjectContext *manageContextObject = [self managedObjectContext];
-    NSFetchRequest *fetchRequest =[[NSFetchRequest alloc]initWithEntityName:@"MyProduct"];
+    NSFetchRequest *fetchRequest =[[NSFetchRequest alloc]initWithEntityName:@"Product"];
     self.products = [[manageContextObject executeFetchRequest:fetchRequest error:nil] mutableCopy];
     [self.tableView reloadData];
 }
