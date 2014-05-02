@@ -9,12 +9,10 @@
 #import "AddCategoryViewController.h"
 #import "CategoryTableViewController.h"
 
-#import "MyCategory.h"
+#import "PCategory.h"
 #import "AppDelegate.h"
 
 @interface AddCategoryViewController ()
-
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @end
 
@@ -31,27 +29,18 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view
-	//1
-	AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-	//2
-	self.managedObjectContext = appDelegate.managedObjectContext;
 }
 
 - (IBAction)save:(id)sender {
 	NSLog(@"Save button");
-	NSManagedObjectContext *context = [self managedObjectContext];
-
-	// Create a new device
-	MyCategory *newCategory = [NSEntityDescription insertNewObjectForEntityForName:@"Category" inManagedObjectContext:context];
-	// Save the object to persistent store
-	newCategory.category_name = self.nameTextField.text;
-
-	NSError *error;
-	if (![self.managedObjectContext save:&error]) {
-		NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
-	}
-
-	[self dismissViewControllerAnimated:YES completion:nil];
+    
+    if (self.categoryNameTextField.text.length > 0){
+        PCategory *newCategory = [PCategory MR_createEntity];
+        newCategory.category_name = self.categoryNameTextField.text;
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+	
 }
 
 - (IBAction)cancel:(id)sender {

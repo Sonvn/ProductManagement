@@ -16,14 +16,6 @@
 @implementation AddProductViewController
 @synthesize product;
 
-- (NSManagedObjectContext *)managedObjectContext {
-    NSManagedObjectContext *context = nil;
-    id delegate = [[UIApplication sharedApplication] delegate];
-    if ([delegate performSelector:@selector(managedObjectContext)]) {
-        context = [delegate managedObjectContext];
-    }
-    return context;
-}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -64,28 +56,6 @@
 */
 
 - (IBAction)save:(id)sender {
-    NSManagedObjectContext *context = [self managedObjectContext];
-    
-    if (self.product) {
-        // Update existing device
-        [self.product setValue:self.productNameTextField.text forKey:@"product_name"];
-        [self.product setValue:self.providerProductTextField.text forKey:@"product_provider"];
-        [self.product setValue:self.categoryProductTextField.text forKey:@"product_category"];
-        
-    } else {
-        // Create a new device
-        NSManagedObject *newDevice = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:context];
-        [newDevice setValue:self.productNameTextField.text forKey:@"product_name"];
-        [newDevice setValue:self.providerProductTextField.text forKey:@"product_provider"];
-        [newDevice setValue:self.categoryProductTextField.text forKey:@"product_category"];
-    }
-    
-    NSError *error = nil;
-    // Save the object to persistent store
-    if (![context save:&error]) {
-        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
-    }
-    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

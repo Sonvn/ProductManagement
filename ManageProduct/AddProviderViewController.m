@@ -14,15 +14,6 @@
 
 @implementation AddProviderViewController
 
-- (NSManagedObjectContext *)managedObjectContext {
-    NSManagedObjectContext *context = nil;
-    id delegate = [[UIApplication sharedApplication] delegate];
-    if ([delegate performSelector:@selector(managedObjectContext)]) {
-        context = [delegate managedObjectContext];
-    }
-    return context;
-}
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -39,12 +30,6 @@
 }
 
 - (IBAction)save:(id)sender {
-    NSManagedObjectContext *context = [self managedObjectContext];
-    
-    // Create a new device
-    NSManagedObject *provider = [NSEntityDescription insertNewObjectForEntityForName:@"Provider" inManagedObjectContext:context];
-    [provider setValue:self.providerNameTextField.text forKey:@"provider_name"];
-    // Save the object to persistent store
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

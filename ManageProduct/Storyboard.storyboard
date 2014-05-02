@@ -293,7 +293,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="categoryNameTextField" destination="gIu-Dd-Wh5" id="DR7-4A-DS8"/>
-                        <outlet property="nameTextField" destination="gIu-Dd-Wh5" id="5AG-Bo-xLU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zKE-n6-S9e" userLabel="First Responder" sceneMemberID="firstResponder"/>

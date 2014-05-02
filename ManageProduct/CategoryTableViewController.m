@@ -9,14 +9,9 @@
 #import "CategoryTableViewController.h"
 #import "AddCategoryViewController.h"
 #import "AppDelegate.h"
-#import "MyCategory.h"
+#import "PCategory.h"
 
 @interface CategoryTableViewController ()
-
-@property (nonatomic, strong) NSArray *fetchedCategoriesArray;
-@property (nonatomic, retain) AppDelegate *appDelegate;
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
-
 
 @end
 
@@ -38,16 +33,13 @@
 
 	// Uncomment the following line to display an Edit button in the navigation bar for this view controller.
 //    self.navigationItem.rightBarButtonItem = self.editButtonItem;
-
-	self.appDelegate = [UIApplication sharedApplication].delegate;
-	self.managedObjectContext = self.appDelegate.managedObjectContext;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
-	self.fetchedCategoriesArray = [self.appDelegate getAllCategories];
-	[self.tableView reloadData];
-	NSLog(@"viewDidAppear");
+    self.categories = [PCategory MR_findAll];
+    [self.tableView reloadData];
+	NSLog(@"viewDidAppear. There are %lu categories", (unsigned long)[self.categories count]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,16 +63,15 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //#warning Incomplete method implementation.
 	// Return the number of rows in the section.
-	return [self.fetchedCategoriesArray count];
+	return [self.categories count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListCategoriesCell" forIndexPath:indexPath];
 
 	// Configure the cell...
-	MyCategory *category = [self.fetchedCategoriesArray objectAtIndex:indexPath.row];
-	cell.textLabel.text = category.category_name;
-
+    PCategory *category = [self.categories objectAtIndex:indexPath.row];
+    cell.textLabel.text = category.category_name;
 	return cell;
 }
 

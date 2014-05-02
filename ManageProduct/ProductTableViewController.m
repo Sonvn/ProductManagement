@@ -10,21 +10,11 @@
 #import "DetailProductViewController.h"
 #import "AddProductViewController.h"
 
-@interface ProductTableViewController ()\
-@property (strong) NSMutableArray *products;
+@interface ProductTableViewController ()
 
 @end
 
 @implementation ProductTableViewController
-
-- (NSManagedObjectContext *)managedObjectContext {
-    NSManagedObjectContext *context = nil;
-    id delegate = [[UIApplication sharedApplication] delegate];
-    if ([delegate performSelector:@selector(managedObjectContext)]) {
-        context = [delegate managedObjectContext];
-    }
-    return context;
-}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -48,9 +38,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    NSManagedObjectContext *manageContextObject = [self managedObjectContext];
-    NSFetchRequest *fetchRequest =[[NSFetchRequest alloc]initWithEntityName:@"Product"];
-    self.products = [[manageContextObject executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
     [self.tableView reloadData];
 }
 
@@ -71,7 +59,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return self.products.count;
+    return 0;
 }
 
 
@@ -81,9 +69,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    NSManagedObject *product = [self.products objectAtIndex:indexPath.row];
-    [cell.textLabel setText:[NSString stringWithFormat:@"%@", [product valueForKey:@"product_name"]]];
-    return cell;
+        return cell;
 }
 
 
@@ -100,30 +86,16 @@
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSManagedObjectContext *context = [self managedObjectContext];
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete object from database
-        [context deleteObject:[self.products objectAtIndex:indexPath.row]];
         
-        NSError *error = nil;
-        if (![context save:&error]) {
-            NSLog(@"Can't Delete! %@ %@", error, [error localizedDescription]);
-            return;
-        }
-        
-        // Remove device from table view
-        [self.products removeObjectAtIndex:indexPath.row];
-        [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationRight];
     }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"DetailProduct"]) {
-        NSManagedObject *selectedDevice = [self.products objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
-        DetailProductViewController *destViewController = segue.destinationViewController;
-        destViewController.product = selectedDevice;
+        
     }
 }
 

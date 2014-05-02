@@ -1,17 +1,17 @@
 //
-//  MyProduct.m
+//  Product.m
 //  ManageProduct
 //
-//  Created by Ngọc Nguyên on 4/28/14.
+//  Created by Ngọc Nguyên on 5/2/14.
 //  Copyright (c) 2014 MAC. All rights reserved.
 //
 
-#import "MyProduct.h"
-#import "MyCategory.h"
-#import "MyProvider.h"
+#import "Product.h"
+#import "PCategory.h"
+#import "Provider.h"
 
 
-@implementation MyProduct
+@implementation Product
 
 @dynamic product_category;
 @dynamic product_decription;

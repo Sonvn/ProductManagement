@@ -11,4 +11,6 @@
 
 @interface CategoryTableViewController : RootViewController
 
+@property (nonatomic, strong) NSArray *categories;
+
 @end
