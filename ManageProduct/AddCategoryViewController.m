@@ -9,7 +9,7 @@
 #import "AddCategoryViewController.h"
 #import "CategoryTableViewController.h"
 
-#import "PCategory.h"
+#import "XCategory.h"
 #import "AppDelegate.h"
 
 @interface AddCategoryViewController ()
@@ -35,7 +35,7 @@
 	NSLog(@"Save button");
     
     if (self.categoryNameTextField.text.length > 0){
-        PCategory *newCategory = [PCategory MR_createEntity];
+        XCategory *newCategory = [XCategory MR_createEntity];
         newCategory.category_name = self.categoryNameTextField.text;
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         [self dismissViewControllerAnimated:YES completion:nil];

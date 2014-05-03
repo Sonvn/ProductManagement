@@ -8,8 +8,8 @@
 
 #import "CategoryTableViewController.h"
 #import "AddCategoryViewController.h"
-#import "AppDelegate.h"
-#import "PCategory.h"
+#import "DetailCategoryViewController.h"
+#import "XCategory.h"
 
 @interface CategoryTableViewController ()
 
@@ -37,8 +37,8 @@
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
-    self.categories = [PCategory MR_findAll];
-    [self.tableView reloadData];
+	self.categories = [XCategory MR_findAll];
+	[self.tableView reloadData];
 	NSLog(@"viewDidAppear. There are %lu categories", (unsigned long)[self.categories count]);
 }
 
@@ -70,9 +70,13 @@
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListCategoriesCell" forIndexPath:indexPath];
 
 	// Configure the cell...
-    PCategory *category = [self.categories objectAtIndex:indexPath.row];
-    cell.textLabel.text = category.category_name;
+	XCategory *category = [self.categories objectAtIndex:indexPath.row];
+	cell.textLabel.text = category.category_name;
 	return cell;
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+	NSLog(@"accessory button at row %ld", (long)indexPath.row);
 }
 
 /*
@@ -113,15 +117,20 @@
    }
  */
 
-/*
+
    #pragma mark - Navigation
 
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-   {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-   }
- */
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+	// Get the new view controller using [segue destinationViewController].
+	// Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"ToCategoryDetailViewSegue"]){
+        DetailCategoryViewController *source = segue.destinationViewController;
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSLog(@"Selected row %ld", (long)indexPath.row);
+        source.category = [self.categories objectAtIndex:indexPath.row];
+    }
+
+}
 
 @end

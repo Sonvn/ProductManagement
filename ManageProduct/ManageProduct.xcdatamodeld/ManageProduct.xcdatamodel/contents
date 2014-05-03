@@ -1,34 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C64" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Category_Provider" representedClassName="Category_Provider" syncable="YES">
-        <attribute name="category" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="provider" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <relationship name="with_category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PCategory" inverseName="with_category_provider" inverseEntity="PCategory" syncable="YES"/>
-        <relationship name="with_provider" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Provider" inverseName="with_category_provider" inverseEntity="Provider" syncable="YES"/>
-    </entity>
-    <entity name="PCategory" representedClassName="PCategory" syncable="YES">
+    <entity name="XCategory" representedClassName="XCategory" syncable="YES">
         <attribute name="category_name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="with_category_provider" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Category_Provider" inverseName="with_category" inverseEntity="Category_Provider" syncable="YES"/>
-        <relationship name="with_product" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="with_category" inverseEntity="Product" syncable="YES"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XProduct" inverseName="category" inverseEntity="XProduct" syncable="YES"/>
+        <relationship name="providers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XProvider" inverseName="categories" inverseEntity="XProvider" syncable="YES"/>
     </entity>
-    <entity name="Product" representedClassName="Product" syncable="YES">
-        <attribute name="product_category" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="product_decription" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="XProduct" representedClassName="XProduct" syncable="YES">
+        <attribute name="product_description" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="product_image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="product_name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="product_provider" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="with_category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PCategory" inverseName="with_product" inverseEntity="PCategory" syncable="YES"/>
-        <relationship name="with_provider" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Provider" inverseName="with_product" inverseEntity="Provider" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="XCategory" inverseName="products" inverseEntity="XCategory" syncable="YES"/>
+        <relationship name="provider" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="XProvider" inverseName="products" inverseEntity="XProvider" syncable="YES"/>
     </entity>
-    <entity name="Provider" representedClassName="Provider" syncable="YES">
+    <entity name="XProvider" representedClassName="XProvider" syncable="YES">
         <attribute name="provider_name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="with_category_provider" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Category_Provider" inverseName="with_provider" inverseEntity="Category_Provider" syncable="YES"/>
-        <relationship name="with_product" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="with_provider" inverseEntity="Product" syncable="YES"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XCategory" inverseName="providers" inverseEntity="XCategory" syncable="YES"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XProduct" inverseName="provider" inverseEntity="XProduct" syncable="YES"/>
     </entity>
     <elements>
-        <element name="PCategory" positionX="-666" positionY="-270" width="128" height="88"/>
-        <element name="Category_Provider" positionX="-459" positionY="-364" width="128" height="103"/>
-        <element name="Product" positionX="-461" positionY="-153" width="128" height="148"/>
-        <element name="Provider" positionX="-263" positionY="-265" width="128" height="88"/>
+        <element name="XCategory" positionX="-666" positionY="-270" width="128" height="88"/>
+        <element name="XProduct" positionX="-461" positionY="-162" width="128" height="118"/>
+        <element name="XProvider" positionX="-290" positionY="-277" width="128" height="88"/>
     </elements>
 </model>
