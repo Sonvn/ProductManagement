@@ -8,7 +8,7 @@
         <!--Category Table View Controller - Categories-->
         <scene sceneID="5Ak-QA-L76">
             <objects>
-                <tableViewController storyboardIdentifier="category" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oJg-iU-5zw" customClass="CategoryTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CategoryTableViewID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oJg-iU-5zw" customClass="CategoryTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="XLy-hW-2Qo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,8 +22,8 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="FAd-J6-hrj" kind="push" id="Iwa-55-PAQ"/>
-                                    <segue destination="elG-p3-sPH" kind="push" identifier="ToCategoryDetailViewSegue" trigger="accessoryAction" id="5Be-9i-6kC"/>
+                                    <segue destination="FAd-J6-hrj" kind="push" identifier="CategoryTable2ProductTableSegueID" id="Iwa-55-PAQ"/>
+                                    <segue destination="elG-p3-sPH" kind="push" identifier="CategoryTable2CategoryDetailSegueID" trigger="accessoryAction" id="5Be-9i-6kC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -35,7 +35,7 @@
                     <navigationItem key="navigationItem" title="Categories" id="yiw-Z6-PU3">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FWZ-mm-pPa">
                             <connections>
-                                <segue destination="Gum-Zm-atQ" kind="modal" id="ZbZ-1y-GzP"/>
+                                <segue destination="Gum-Zm-atQ" kind="modal" identifier="CategoryTable2AddCategorySegueID" id="ZbZ-1y-GzP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -47,7 +47,7 @@
         <!--Provider Table View Controller - Providers-->
         <scene sceneID="h5i-1I-oze">
             <objects>
-                <tableViewController storyboardIdentifier="provider" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LXB-i5-aKm" customClass="ProviderTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ProviderTableViewID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LXB-i5-aKm" customClass="ProviderTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="EHq-ZH-MLT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,8 +61,8 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="FAd-J6-hrj" kind="push" id="3QB-a0-Gqq"/>
-                                    <segue destination="nGi-HN-w1M" kind="push" trigger="accessoryAction" id="VT5-Uz-fmF"/>
+                                    <segue destination="FAd-J6-hrj" kind="push" identifier="ProviderTable2ProductTableSegueID" id="3QB-a0-Gqq"/>
+                                    <segue destination="nGi-HN-w1M" kind="push" identifier="ProviderTable2ProviderDetailSegueID" trigger="accessoryAction" id="VT5-Uz-fmF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -74,7 +74,7 @@
                     <navigationItem key="navigationItem" title="Providers" id="NnB-In-XIW">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ynx-Fr-xkW">
                             <connections>
-                                <segue destination="B9L-VG-O5K" kind="modal" id="ZVq-il-ayF"/>
+                                <segue destination="B9L-VG-O5K" kind="modal" identifier="ProviderTable2AddProviderSegueID" id="ZVq-il-ayF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -573,7 +573,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="3dC-EO-xHg"/>
         <segue reference="Iwa-55-PAQ"/>
-        <segue reference="puj-al-5oT"/>
     </inferredMetricsTieBreakers>
 </document>

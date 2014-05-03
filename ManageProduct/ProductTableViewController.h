@@ -11,4 +11,6 @@
 
 @interface ProductTableViewController : RootViewController
 
+@property (nonatomic, strong) NSArray *products;
+
 @end

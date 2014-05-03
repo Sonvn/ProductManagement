@@ -9,6 +9,7 @@
 #import "ProductTableViewController.h"
 #import "DetailProductViewController.h"
 #import "AddProductViewController.h"
+#import "XProduct.h"
 
 @interface ProductTableViewController ()
 

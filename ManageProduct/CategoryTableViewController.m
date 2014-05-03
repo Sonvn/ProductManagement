@@ -10,6 +10,7 @@
 #import "AddCategoryViewController.h"
 #import "DetailCategoryViewController.h"
 #import "XCategory.h"
+#import "ProductTableViewController.h"
 
 @interface CategoryTableViewController ()
 
@@ -124,11 +125,19 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 	// Get the new view controller using [segue destinationViewController].
 	// Pass the selected object to the new view controller.
-    if ([segue.identifier isEqualToString:@"ToCategoryDetailViewSegue"]){
-        DetailCategoryViewController *source = segue.destinationViewController;
+    
+    if ([segue.identifier isEqualToString:@"CategoryTable2CategoryDetailSegueID"]){
+        DetailCategoryViewController *dest = [segue destinationViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSLog(@"Selected row %ld", (long)indexPath.row);
-        source.category = [self.categories objectAtIndex:indexPath.row];
+        //NSLog(@"Selected row %ld", (long)indexPath.row);
+        dest.category = [self.categories objectAtIndex:indexPath.row];
+    }
+    
+    else if ([segue.identifier isEqualToString:@"CategoryTable2ProductTableSegueID"]){
+        ProductTableViewController *dest = [segue destinationViewController];
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        XCategory *selectedCategory = [self.categories objectAtIndex:indexPath.row];
+        dest.navigationItem.title = [NSString stringWithFormat:@"Products - %@", [selectedCategory category_name]];
     }
 
 }
