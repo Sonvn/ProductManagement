@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "RootViewController.h"
 
+#import "XCategory.h"
+#import "XProvider.h"
+
 @interface ProductTableViewController : RootViewController
 
-@property (nonatomic, strong) NSArray *products;
+@property (nonatomic, strong) id managedObject;
 
 @end

@@ -38,21 +38,21 @@
     REMenuItem *categoryItem = [[REMenuItem alloc] initWithTitle:@"Categories"
                                                        image:[UIImage imageNamed:@"Icon_Home"]
                                             highlightedImage:nil
-                                                      action:^(REMenuItem *item) {                                                          CategoryTableViewController *category = [self.storyboard instantiateViewControllerWithIdentifier:@"category"];
+                                                      action:^(REMenuItem *item) {                                                          CategoryTableViewController *category = [self.storyboard instantiateViewControllerWithIdentifier:@"CategoryTableViewID"];
                                                            [weakSelf setViewControllers:@[category] animated:YES];                                                      }];
     
     REMenuItem *providerItem = [[REMenuItem alloc] initWithTitle:@"Providers"
                                                           image:[UIImage imageNamed:@"Icon_Explore"]
                                                highlightedImage:nil
                                                          action:^(REMenuItem *item) {
-                                                                ProviderTableViewController *controller =[self.storyboard instantiateViewControllerWithIdentifier:@"provider"];
+                                                                ProviderTableViewController *controller =[self.storyboard instantiateViewControllerWithIdentifier:@"ProviderTableViewID"];
                                                              [weakSelf setViewControllers:@[controller] animated:YES];
                                                          }];
     REMenuItem *productItem = [[REMenuItem alloc] initWithTitle:@"All Products"
                                                            image:[UIImage imageNamed:@"Icon_Explore"]
                                                 highlightedImage:nil
                                                           action:^(REMenuItem *item) {
-                                                              ProductTableViewController *controller =[self.storyboard instantiateViewControllerWithIdentifier:@"products"];
+                                                              ProductTableViewController *controller =[self.storyboard instantiateViewControllerWithIdentifier:@"ProductTableViewID"];
                                                               [weakSelf setViewControllers:@[controller] animated:YES];
                                                           }];
     

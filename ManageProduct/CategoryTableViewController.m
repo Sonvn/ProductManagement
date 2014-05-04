@@ -40,7 +40,7 @@
 	[super viewWillAppear:animated];
 	self.categories = [XCategory MR_findAll];
 	[self.tableView reloadData];
-	NSLog(@"viewDidAppear. There are %lu categories", (unsigned long)[self.categories count]);
+	NSLog(@"CategoryTable:viewDidAppear. There are %lu categories", (unsigned long)[self.categories count]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,27 +80,30 @@
 	NSLog(@"accessory button at row %ld", (long)indexPath.row);
 }
 
-/*
-   // Override to support conditional editing of the table view.
-   - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-   {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-   }
- */
+// Override to support conditional editing of the table view.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+	// Return NO if you do not want the specified item to be editable.
+	return YES;
+}
 
-/*
-   // Override to support editing the table view.
-   - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-   {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+	if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [tableView beginUpdates];
+		
         // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }
-   }
- */
+        XCategory *categoryToDelete = [self.categories objectAtIndex:indexPath.row];
+        [categoryToDelete MR_deleteEntity];
+        
+        self.categories = [XCategory MR_findAll];
+		[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+        [tableView endUpdates];
+	}
+	else if (editingStyle == UITableViewCellEditingStyleInsert) {
+		// Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+	}
+}
 
 /*
    // Override to support rearranging the table view.
@@ -125,21 +128,22 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 	// Get the new view controller using [segue destinationViewController].
 	// Pass the selected object to the new view controller.
-    
-    if ([segue.identifier isEqualToString:@"CategoryTable2CategoryDetailSegueID"]){
-        DetailCategoryViewController *dest = [segue destinationViewController];
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        //NSLog(@"Selected row %ld", (long)indexPath.row);
-        dest.category = [self.categories objectAtIndex:indexPath.row];
-    }
-    
-    else if ([segue.identifier isEqualToString:@"CategoryTable2ProductTableSegueID"]){
-        ProductTableViewController *dest = [segue destinationViewController];
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        XCategory *selectedCategory = [self.categories objectAtIndex:indexPath.row];
-        dest.navigationItem.title = [NSString stringWithFormat:@"Products - %@", [selectedCategory category_name]];
-    }
 
+	if ([segue.identifier isEqualToString:@"CategoryTable2CategoryDetailSegueID"]) {
+		DetailCategoryViewController *dest = [segue destinationViewController];
+		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+		//NSLog(@"Selected row %ld", (long)indexPath.row);
+		dest.category = [self.categories objectAtIndex:indexPath.row];
+	}
+
+	else if ([segue.identifier isEqualToString:@"CategoryTable2ProductTableSegueID"]) {
+		ProductTableViewController *dest = [segue destinationViewController];
+		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+		XCategory *selectedCategory = [self.categories objectAtIndex:indexPath.row];
+
+		dest.navigationItem.title = [NSString stringWithFormat:@"Products - %@", [selectedCategory category_name]];
+		dest.managedObject = selectedCategory;
+	}
 }
 
 @end
