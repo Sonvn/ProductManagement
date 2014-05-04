@@ -126,8 +126,16 @@
 	if ([segue.identifier isEqualToString:@"ProductTable2AddProductSegueID"]) {
 		UINavigationController *destNavigationController = [segue destinationViewController];
 		AddProductViewController *destViewController = [destNavigationController viewControllers][0];
-		destViewController.managedObject = self.managedObject;
+		
+        destViewController.managedObject = self.managedObject;
 	}
+    else if ([segue.identifier isEqualToString:@"ProductTable2ProductDetailSegueID"]){
+        DetailProductViewController *dest = [segue destinationViewController];
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        XProduct *product = [self.products objectAtIndex:indexPath.row];
+        
+        dest.product = product;
+    }
 }
 
 @end

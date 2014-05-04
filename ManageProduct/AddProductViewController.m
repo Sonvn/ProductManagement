@@ -50,7 +50,7 @@
 	if (self.productNameTextField.text.length > 0) {
 		XProduct *product = [XProduct MR_createEntity];
 		product.product_name = self.productNameTextField.text;
-		product.product_image = (NSData *)self.productImageView.image;
+		product.product_image = UIImagePNGRepresentation(self.productImageView.image);
         
         [self.managedObject addProductsObject:product];
         

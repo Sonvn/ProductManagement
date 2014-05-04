@@ -7,12 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XProduct.h"
+#import "XCategory.h"
+#import "XProvider.h"
 
 @interface DetailProductViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *productNameTextField;
-@property (weak, nonatomic) IBOutlet UILabel *categoryProductTextField;
-@property (weak, nonatomic) IBOutlet UILabel *providerProductTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *productNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *categoryProductTextField;
+@property (weak, nonatomic) IBOutlet UITextField *providerProductTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *productImageView;
-@property (strong, nonatomic) NSManagedObject *product;
+
+@property (strong, nonatomic) id product;
 
 @end
