@@ -276,7 +276,6 @@
         <!--Detail Category View Controller-->
         <scene sceneID="C5U-uN-xoH">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zsx-GE-5BG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="elG-p3-sPH" customClass="DetailCategoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NYr-fD-crS"/>
@@ -292,7 +291,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6U-iu-aWb">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit category name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6U-iu-aWb">
                                 <rect key="frame" x="72" y="92" width="180" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -315,6 +314,7 @@
                         <outlet property="nameTextField" destination="lL7-RP-25x" id="SJz-pc-qOz"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zsx-GE-5BG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="524" y="-937"/>
         </scene>
@@ -398,9 +398,35 @@
                     <view key="view" contentMode="scaleToFill" id="WhL-Rd-9bp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7u2-ZE-2GS">
+                                <rect key="frame" x="20" y="116" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit provider name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bv-2Q-hZ5">
+                                <rect key="frame" x="70" y="87" width="180" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7u2-ZE-2GS" firstAttribute="leading" secondItem="WhL-Rd-9bp" secondAttribute="leading" constant="20" id="1Xl-kr-KPT"/>
+                            <constraint firstItem="5bv-2Q-hZ5" firstAttribute="leading" secondItem="WhL-Rd-9bp" secondAttribute="leading" constant="70" id="Kle-GH-CcA"/>
+                            <constraint firstItem="5bv-2Q-hZ5" firstAttribute="top" secondItem="8nL-dQ-LHS" secondAttribute="bottom" constant="23" id="OGj-eK-9NV"/>
+                            <constraint firstAttribute="trailing" secondItem="7u2-ZE-2GS" secondAttribute="trailing" constant="20" id="VNk-Wd-GTj"/>
+                            <constraint firstItem="7u2-ZE-2GS" firstAttribute="top" secondItem="5bv-2Q-hZ5" secondAttribute="bottom" constant="8" id="gA9-fH-Prs"/>
+                            <constraint firstAttribute="trailing" secondItem="5bv-2Q-hZ5" secondAttribute="trailing" constant="70" id="su4-qK-1HV"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fZw-xZ-uUA"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="7u2-ZE-2GS" id="FzH-Gf-Nfw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VK6-Hg-zvw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -419,7 +445,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New provider name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Czp-g5-93U">
-                                <rect key="frame" x="83" y="93" width="150" height="21"/>
+                                <rect key="frame" x="85" y="93" width="150" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -587,7 +613,6 @@
         <!--Navigation Controller-->
         <scene sceneID="o0S-EL-z4t">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sDh-o6-iaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hol-EG-VSu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="HWG-zV-z4L"/>
@@ -600,6 +625,7 @@
                         <segue destination="7Bl-C1-tbl" kind="relationship" relationship="rootViewController" id="ZuM-a7-omw"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sDh-o6-iaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1660" y="131"/>
         </scene>

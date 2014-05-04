@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XProvider.h"
 
 @interface DetailProviderViewController : UIViewController
+
+@property (nonatomic, strong) XProvider *provider;
+
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 
 @end

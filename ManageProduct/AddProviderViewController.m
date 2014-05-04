@@ -7,6 +7,7 @@
 //
 
 #import "AddProviderViewController.h"
+#import "XProvider.h"
 
 @interface AddProviderViewController ()
 
@@ -30,7 +31,14 @@
 }
 
 - (IBAction)save:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if (self.providerNameTextField.text.length > 0){
+        XProvider *newProvider = [XProvider MR_createEntity];
+        newProvider.provider_name = self.providerNameTextField.text;
+        
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+
 }
 
 - (IBAction)cancel:(id)sender {

@@ -27,6 +27,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.nameTextField.text = self.provider.provider_name;
+}
+
+- (void)willMoveToParentViewController:(UIViewController *)parent{
+    if (![parent isEqual:self.parentViewController]){
+        self.provider.provider_name = self.nameTextField.text;
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+    }
 }
 
 - (void)didReceiveMemoryWarning

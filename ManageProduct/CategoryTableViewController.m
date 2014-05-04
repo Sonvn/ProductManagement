@@ -37,7 +37,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-	[super viewWillAppear:animated];
+	[super viewDidAppear:animated];
 	self.categories = [XCategory MR_findAll];
 	[self.tableView reloadData];
 	NSLog(@"CategoryTable:viewDidAppear. There are %lu categories", (unsigned long)[self.categories count]);
@@ -46,11 +46,6 @@
 - (void)didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];
 	// Dispose of any resources that can be recreated.
-}
-
-- (void)addCategory:(id)sender {
-	AddCategoryViewController *AddCategoryVC = [[AddCategoryViewController alloc] initWithNibName:nil bundle:nil];
-	[self.navigationController pushViewController:AddCategoryVC animated:NO];
 }
 
 #pragma mark - Table view data source

@@ -12,4 +12,6 @@
 
 @interface ProviderTableViewController : RootViewController
 
+@property (nonatomic, strong) NSArray *providers;
+
 @end
