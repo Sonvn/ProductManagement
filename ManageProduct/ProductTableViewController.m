@@ -41,7 +41,11 @@
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
     
-    self.products = [[self.managedObject products] allObjects];
+    if (self.managedObject == nil){
+        self.products = [XProduct MR_findAll];
+    } else
+        self.products = [[self.managedObject products] allObjects];
+    
 	[self.tableView reloadData];
     
 	NSLog(@"ProductTable:viewDidAppear. There are %lu products", (unsigned long)[self.products count]);
@@ -65,7 +69,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	static NSString *CellIdentifier = @"Cell";
+	static NSString *CellIdentifier = @"ListProductsCell";
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
 	// Configure the cell...

@@ -28,18 +28,29 @@
 	// Do any additional setup after loading the view.
 	if (self.product) {
 		self.productNameTextField.text = [self.product product_name];
-//        [self.providerProductTextField setText:[self.product valueForKey:@"product_provider"]];
-//        [self.categoryProductTextField setText:[self.product valueForKey:@"product_category"]];
+        self.productCategoryTextField.text = [self.product.category category_name];
+        self.productProviderTextField.text = [self.product.provider provider_name];
 		self.productImageView.image = [UIImage imageWithData:[self.product product_image]];
 		self.navigationItem.title = [self.product product_name];
 	}
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
+}
+
+- (void)dismissKeyboard {
+    [self.view endEditing:YES];
 }
 
 - (void)willMoveToParentViewController:(UIViewController *)parent{
     if (![parent isEqual:self.parentViewController]){
-        XProduct *xproduct = (XProduct*)self.product;
-        xproduct.product_name = self.productNameTextField.text;
-        xproduct.product_image = UIImagePNGRepresentation(self.productImageView.image);
+        self.product.product_name = self.productNameTextField.text;
+        self.product.category = [XCategory MR_findFirstByAttribute:@"category_name" withValue:self.productCategoryTextField.text];
+        self.product.provider = [XProvider MR_findFirstByAttribute:@"provider_name" withValue:self.productProviderTextField.text];
+        self.product.product_image = UIImagePNGRepresentation(self.productImageView.image);
     }
 
 }

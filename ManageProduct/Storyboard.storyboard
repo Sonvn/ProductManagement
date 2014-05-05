@@ -101,7 +101,7 @@
             </objects>
             <point key="canvasLocation" x="-51" y="813"/>
         </scene>
-        <!--Product Table View Controller - Products-->
+        <!--Product Table View Controller - All Products-->
         <scene sceneID="qfS-7s-PGw">
             <objects>
                 <tableViewController storyboardIdentifier="ProductTableViewID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FAd-J6-hrj" customClass="ProductTableViewController" sceneMemberID="viewController">
@@ -110,15 +110,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="6mP-PO-Poq" style="IBUITableViewCellStyleDefault" id="BCt-ED-APW">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ListProductsCell" textLabel="6mP-PO-Poq" style="IBUITableViewCellStyleDefault" id="BCt-ED-APW">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BCt-ED-APW" id="5Br-md-OSc">
-                                    <rect key="frame" x="0.0" y="0.0" width="253" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6mP-PO-Poq">
-                                            <rect key="frame" x="15" y="0.0" width="238" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -136,7 +136,7 @@
                             <outlet property="delegate" destination="FAd-J6-hrj" id="ZFg-qJ-xqm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Products" id="5MX-Vv-ZMh">
+                    <navigationItem key="navigationItem" title="All Products" id="5MX-Vv-ZMh">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="l9X-CZ-gUS">
                             <connections>
                                 <segue destination="hol-EG-VSu" kind="modal" identifier="ProductTable2AddProductSegueID" id="3dC-EO-xHg"/>
@@ -279,10 +279,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="categoryProductTextField" destination="MYn-17-XCK" id="klI-rv-QGe"/>
+                        <outlet property="productCategoryTextField" destination="MYn-17-XCK" id="Syd-kU-0cd"/>
                         <outlet property="productImageView" destination="cPr-qe-bcQ" id="xUc-K0-iUg"/>
                         <outlet property="productNameTextField" destination="Vch-2p-JKa" id="qWD-BG-oQn"/>
-                        <outlet property="providerProductTextField" destination="dhF-6P-Vqo" id="SB3-DX-xZj"/>
+                        <outlet property="productProviderTextField" destination="dhF-6P-Vqo" id="ljX-Zi-fLc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AIO-vV-eY9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -675,8 +675,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="8ss-2G-ps2"/>
                     <connections>
+                        <outlet property="productCategoryTextField" destination="zJt-FH-K63" id="Xsv-5B-4Q2"/>
                         <outlet property="productImageView" destination="xKP-ng-UzI" id="JVm-BC-3Rm"/>
                         <outlet property="productNameTextField" destination="BfB-zN-wn3" id="5bj-qk-701"/>
+                        <outlet property="productProviderTextField" destination="zaz-hf-I7C" id="UIP-va-nwo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QYY-gp-bVw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -712,6 +714,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Iwa-55-PAQ"/>
+        <segue reference="3QB-a0-Gqq"/>
     </inferredMetricsTieBreakers>
 </document>

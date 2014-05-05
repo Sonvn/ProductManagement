@@ -13,8 +13,8 @@
 @interface AddProductViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *productNameTextField;
-@property (weak, nonatomic) IBOutlet UITextField *categoryProductTextField;
-@property (weak, nonatomic) IBOutlet UITextField *providerProductTextField;
+@property (weak, nonatomic) IBOutlet UITextField *productCategoryTextField;
+@property (weak, nonatomic) IBOutlet UITextField *productProviderTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *productImageView;
 
 @property (nonatomic, strong) id managedObject;

@@ -14,10 +14,10 @@
 @interface DetailProductViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *productNameTextField;
-@property (weak, nonatomic) IBOutlet UITextField *categoryProductTextField;
-@property (weak, nonatomic) IBOutlet UITextField *providerProductTextField;
+@property (weak, nonatomic) IBOutlet UITextField *productCategoryTextField;
+@property (weak, nonatomic) IBOutlet UITextField *productProviderTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *productImageView;
 
-@property (strong, nonatomic) id product;
+@property (strong, nonatomic) XProduct *product;
 
 @end

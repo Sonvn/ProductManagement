@@ -28,6 +28,15 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view.
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
+}
+
+- (void)dismissKeyboard {
+    [self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,6 +59,8 @@
 	if (self.productNameTextField.text.length > 0) {
 		XProduct *product = [XProduct MR_createEntity];
 		product.product_name = self.productNameTextField.text;
+        product.category = [XCategory MR_findFirstByAttribute:@"category_name" withValue:self.productCategoryTextField.text];
+        product.provider = [XProvider MR_findFirstByAttribute:@"provider_name" withValue:self.productProviderTextField.text];
 		product.product_image = UIImagePNGRepresentation(self.productImageView.image);
         
         [self.managedObject addProductsObject:product];
