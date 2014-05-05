@@ -49,8 +49,15 @@
 - (void)willMoveToParentViewController:(UIViewController *)parent{
     if (![parent isEqual:self.parentViewController]){
         self.product.product_name = self.productNameTextField.text;
+        
         self.product.category = [XCategory MR_findFirstByAttribute:@"category_name" withValue:self.productCategoryTextField.text];
         self.product.provider = [XProvider MR_findFirstByAttribute:@"provider_name" withValue:self.productProviderTextField.text];
+        
+        if (self.product.category && self.product.provider){
+            [self.product.category addProvidersObject:self.product.provider];
+            [self.product.provider addCategoriesObject:self.product.category];
+        }
+        
         self.product.product_image = UIImagePNGRepresentation(self.productImageView.image);
     }
     

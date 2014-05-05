@@ -36,11 +36,11 @@
 	// self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
 	self.providers = [XProvider MR_findAll];
 	[self.tableView reloadData];
-	NSLog(@"ProviderTable:viewDidAppear. There are %lu providers", (unsigned long)[self.providers count]);
+	NSLog(@"ProviderTable: There are %lu providers", (unsigned long)[self.providers count]);
 }
 
 - (void)didReceiveMemoryWarning {

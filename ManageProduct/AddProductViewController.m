@@ -28,6 +28,14 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    if ([self.managedObject isKindOfClass:[XCategory class]]){
+        self.productCategoryTextField.text = [self.managedObject category_name];
+    }
+    else if ([self.managedObject isKindOfClass:[XProvider class]]){
+        self.productProviderTextField.text = [self.managedObject provider_name];
+    }
+    
 	UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
 	                               initWithTarget:self
 	                                       action:@selector(dismissKeyboard)];
@@ -59,13 +67,16 @@
 	if (self.productNameTextField.text.length > 0) {
 		XProduct *product = [XProduct MR_createEntity];
 		product.product_name = self.productNameTextField.text;
-		product.category = [XCategory MR_findFirstByAttribute:@"category_name" withValue:self.productCategoryTextField.text];
+		
+        product.category = [XCategory MR_findFirstByAttribute:@"category_name" withValue:self.productCategoryTextField.text];
 		product.provider = [XProvider MR_findFirstByAttribute:@"provider_name" withValue:self.productProviderTextField.text];
-		product.product_image = UIImagePNGRepresentation(self.productImageView.image);
-
-		if (self.managedObject) {
-			[self.managedObject addProductsObject:product];
-		}
+        
+        if (product.category && product.provider){
+            [product.category addProvidersObject:product.provider];
+            [product.provider addCategoriesObject:product.category];
+        }
+		
+        product.product_image = UIImagePNGRepresentation(self.productImageView.image);
         
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         

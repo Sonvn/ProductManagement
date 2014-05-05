@@ -38,7 +38,7 @@
 	// self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
 
 	if (self.managedObject) {
@@ -49,8 +49,6 @@
 	}
 
 	[self.tableView reloadData];
-
-	NSLog(@"ProductTable:viewDidAppear. There are %lu products", (unsigned long)[self.products count]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,14 +67,17 @@
 	// Return the number of rows in the section.
 	if (section == 0) {
 		if ([self.managedObject isKindOfClass:[XCategory class]]) {
+            NSLog(@"%lu providers", (unsigned long)[self.managedObject providers].count);
 			return [self.managedObject providers].count;
 		}
 		else if ([self.managedObject isKindOfClass:[XProvider class]]) {
+            NSLog(@"%lu categories", (unsigned long)[self.managedObject categories].count);
 			return [self.managedObject categories].count;
 		}
 		else return 0;
 	}
 	else if (section == 1) {
+        NSLog(@"%lu products", (unsigned long)[self.products count]);
 		return [self.products count];
 	}
 	else return 0;
@@ -89,7 +90,7 @@
         else return @"";
 	}
 	else if ([self.managedObject isKindOfClass:[XProvider class]]) {
-		if (section == 0) return @"Providers";
+		if (section == 0) return @"Categories";
         else if (section == 1) return [NSString stringWithFormat:@"All Products of %@", [self.managedObject provider_name]];
         else return @"";
 	}
