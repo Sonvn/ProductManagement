@@ -53,7 +53,8 @@
         self.product.provider = [XProvider MR_findFirstByAttribute:@"provider_name" withValue:self.productProviderTextField.text];
         self.product.product_image = UIImagePNGRepresentation(self.productImageView.image);
     }
-
+    
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
 }
 
 - (void)didReceiveMemoryWarning {

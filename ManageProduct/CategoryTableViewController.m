@@ -93,6 +93,8 @@
         self.categories = [XCategory MR_findAll];
 		[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+        
         [tableView endUpdates];
 	}
 	else if (editingStyle == UITableViewCellEditingStyleInsert) {
@@ -123,19 +125,17 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 	// Get the new view controller using [segue destinationViewController].
 	// Pass the selected object to the new view controller.
-
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    XCategory *selectedCategory = [self.categories objectAtIndex:indexPath.row];
+    
 	if ([segue.identifier isEqualToString:@"CategoryTable2CategoryDetailSegueID"]) {
 		DetailCategoryViewController *dest = [segue destinationViewController];
-		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-		//NSLog(@"Selected row %ld", (long)indexPath.row);
-		dest.category = [self.categories objectAtIndex:indexPath.row];
+		dest.category = selectedCategory;
 	}
 
 	else if ([segue.identifier isEqualToString:@"CategoryTable2ProductTableSegueID"]) {
 		ProductTableViewController *dest = [segue destinationViewController];
-		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-		XCategory *selectedCategory = [self.categories objectAtIndex:indexPath.row];
-
 		dest.navigationItem.title = [NSString stringWithFormat:@"Products - %@", [selectedCategory category_name]];
 		dest.managedObject = selectedCategory;
 	}

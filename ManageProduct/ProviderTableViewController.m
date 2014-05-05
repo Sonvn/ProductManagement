@@ -91,6 +91,8 @@
         self.providers = [XProvider MR_findAll];
 		[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+        
         [tableView endUpdates];
 	}
 	else if (editingStyle == UITableViewCellEditingStyleInsert) {
@@ -121,17 +123,17 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 	// Get the new view controller using [segue destinationViewController].
 	// Pass the selected object to the new view controller.
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    XProvider *selectedProvider = [self.providers objectAtIndex:indexPath.row];
+    
     if ([segue.identifier isEqualToString:@"ProviderTable2ProviderDetailSegueID"]) {
 		DetailProviderViewController *dest = [segue destinationViewController];
-		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-		//NSLog(@"Selected row %ld", (long)indexPath.row);
-		dest.provider = [self.providers objectAtIndex:indexPath.row];
+		dest.provider = selectedProvider;
 	}
     
 	else if ([segue.identifier isEqualToString:@"ProviderTable2ProductTableSegueID"]) {
 		ProductTableViewController *dest = [segue destinationViewController];
-		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-		XProvider *selectedProvider = [self.providers objectAtIndex:indexPath.row];
         
 		dest.navigationItem.title = [NSString stringWithFormat:@"Products - %@", selectedProvider.provider_name];
 		dest.managedObject = selectedProvider;

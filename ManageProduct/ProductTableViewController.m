@@ -62,21 +62,59 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 	// Return the number of sections.
-	return 1;
+	return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	// Return the number of rows in the section.
-	return [self.products count];
+	if (section == 0) {
+		if ([self.managedObject isKindOfClass:[XCategory class]]) {
+			return [self.managedObject providers].count;
+		}
+		else if ([self.managedObject isKindOfClass:[XProvider class]]) {
+			return [self.managedObject categories].count;
+		}
+		else return 0;
+	}
+	else if (section == 1) {
+		return [self.products count];
+	}
+	else return 0;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	if ([self.managedObject isKindOfClass:[XCategory class]]) {
+		if (section == 0) return @"Providers";
+        else if (section == 1) return [NSString stringWithFormat:@"All Products in category %@", [self.managedObject category_name]];
+        else return @"";
+	}
+	else if ([self.managedObject isKindOfClass:[XProvider class]]) {
+		if (section == 0) return @"Providers";
+        else if (section == 1) return [NSString stringWithFormat:@"All Products of %@", [self.managedObject provider_name]];
+        else return @"";
+	}
+	else return @"";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	static NSString *CellIdentifier = @"ListProductsCell";
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListProductsCell" forIndexPath:indexPath];
 
 	// Configure the cell...
-	XProduct *product = [self.products objectAtIndex:indexPath.row];
-	cell.textLabel.text = product.product_name;
+	if (indexPath.section == 0) {
+		if ([self.managedObject isKindOfClass:[XCategory class]]) {
+			XProvider *provider = [[self.managedObject providers].allObjects objectAtIndex:indexPath.row];
+			cell.textLabel.text = provider.provider_name;
+		}
+		else if ([self.managedObject isKindOfClass:[XProvider class]]) {
+			XCategory *category = [[self.managedObject categories].allObjects objectAtIndex:indexPath.row];
+			cell.textLabel.text = category.category_name;
+		}
+	}
+	else if (indexPath.section == 1) {
+		XProduct *product = [self.products objectAtIndex:indexPath.row];
+		cell.textLabel.text = product.product_name;
+	}
+
 	return cell;
 }
 
@@ -92,15 +130,19 @@
 		[tableView beginUpdates];
 
 		// Delete the row from the data source
-		XProduct *productToDelete = [self.products objectAtIndex:indexPath.row];
-
-		if (self.managedObject) {
-			[self.managedObject removeProductsObject:productToDelete];
-			self.products = [[self.managedObject products] allObjects];
+		if (indexPath.section == 0) {
 		}
-		else {
-			[productToDelete MR_deleteEntity];
-			self.products = [XProduct MR_findAll];
+		else if (indexPath.section == 1) {
+			XProduct *productToDelete = [self.products objectAtIndex:indexPath.row];
+
+			if (self.managedObject) {
+				[self.managedObject removeProductsObject:productToDelete];
+				self.products = [[self.managedObject products] allObjects];
+			}
+			else {
+				[productToDelete MR_deleteEntity];
+				self.products = [XProduct MR_findAll];
+			}
 		}
 
 		[[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
