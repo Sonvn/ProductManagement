@@ -40,14 +40,16 @@
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
-    
-    if (self.managedObject == nil){
-        self.products = [XProduct MR_findAll];
-    } else
-        self.products = [[self.managedObject products] allObjects];
-    
+
+	if (self.managedObject) {
+		self.products = [[self.managedObject products] allObjects];
+	}
+	else {
+		self.products = [XProduct MR_findAll];
+	}
+
 	[self.tableView reloadData];
-    
+
 	NSLog(@"ProductTable:viewDidAppear. There are %lu products", (unsigned long)[self.products count]);
 }
 
@@ -87,19 +89,27 @@
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
 	if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [tableView beginUpdates];
-        
-        // Delete the row from the data source
-        XProduct *productToDelete = [self.products objectAtIndex:indexPath.row];
-        [self.managedObject removeProductsObject:productToDelete];
-        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
-        
-        self.products = [[self.managedObject products] allObjects];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        
-        [tableView endUpdates];
+		[tableView beginUpdates];
+
+		// Delete the row from the data source
+		XProduct *productToDelete = [self.products objectAtIndex:indexPath.row];
+
+		if (self.managedObject) {
+			[self.managedObject removeProductsObject:productToDelete];
+			self.products = [[self.managedObject products] allObjects];
+		}
+		else {
+			[productToDelete MR_deleteEntity];
+			self.products = [XProduct MR_findAll];
+		}
+
+		[[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+
+		[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+
+		[tableView endUpdates];
 	}
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+	else if (editingStyle == UITableViewCellEditingStyleInsert) {
 		// Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
 	}
 }
@@ -130,16 +140,16 @@
 	if ([segue.identifier isEqualToString:@"ProductTable2AddProductSegueID"]) {
 		UINavigationController *destNavigationController = [segue destinationViewController];
 		AddProductViewController *destViewController = [destNavigationController viewControllers][0];
-		
-        destViewController.managedObject = self.managedObject;
+
+		destViewController.managedObject = self.managedObject;
 	}
-    else if ([segue.identifier isEqualToString:@"ProductTable2ProductDetailSegueID"]){
-        DetailProductViewController *dest = [segue destinationViewController];
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        XProduct *product = [self.products objectAtIndex:indexPath.row];
-        
-        dest.product = product;
-    }
+	else if ([segue.identifier isEqualToString:@"ProductTable2ProductDetailSegueID"]) {
+		DetailProductViewController *dest = [segue destinationViewController];
+		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+		XProduct *product = [self.products objectAtIndex:indexPath.row];
+
+		dest.product = product;
+	}
 }
 
 @end

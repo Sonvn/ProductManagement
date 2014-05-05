@@ -272,7 +272,7 @@
                                 <action selector="cancel:" destination="7Bl-C1-tbl" id="P3Q-e8-1UL"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="RHh-OC-zA4">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="RHh-OC-zA4">
                             <connections>
                                 <action selector="save:" destination="7Bl-C1-tbl" id="Iwd-6o-6Fk"/>
                             </connections>
@@ -369,7 +369,7 @@
                                                 <action selector="cancel:" destination="Gum-Zm-atQ" id="50h-E2-zsO"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="gZN-jh-MhL">
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="gZN-jh-MhL">
                                             <connections>
                                                 <action selector="save:" destination="Gum-Zm-atQ" id="ztp-zI-F10"/>
                                             </connections>
@@ -483,7 +483,7 @@
                                                 <action selector="cancel:" destination="B9L-VG-O5K" id="dSD-vf-SDr"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Djs-SH-qeS">
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="Djs-SH-qeS">
                                             <connections>
                                                 <action selector="save:" destination="B9L-VG-O5K" id="cxi-Kc-KE8"/>
                                             </connections>
@@ -714,6 +714,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="3QB-a0-Gqq"/>
+        <segue reference="Iwa-55-PAQ"/>
     </inferredMetricsTieBreakers>
 </document>

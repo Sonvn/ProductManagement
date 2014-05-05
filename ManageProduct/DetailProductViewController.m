@@ -31,7 +31,8 @@
         self.productCategoryTextField.text = [self.product.category category_name];
         self.productProviderTextField.text = [self.product.provider provider_name];
 		self.productImageView.image = [UIImage imageWithData:[self.product product_image]];
-		self.navigationItem.title = [self.product product_name];
+		
+        self.navigationItem.title = [self.product product_name];
 	}
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
