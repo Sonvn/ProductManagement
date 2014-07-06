@@ -56,14 +56,14 @@
                                                               [weakSelf setViewControllers:@[controller] animated:YES];
                                                           }];
     
-    REMenuItem *accessKeyItem = [[REMenuItem alloc] initWithTitle:@"Access Key"
-                                                           image:[UIImage imageNamed:@"Icon_Activity"]
-                                                highlightedImage:nil
-                                                          action:^(REMenuItem *item) {
-                                                              UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"please add an access key" message:@"include numbers and chracters" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
-                                                              alert.alertViewStyle = UIAlertViewStyleSecureTextInput;
-                                                              [alert show];
-                                                          }];
+//    REMenuItem *accessKeyItem = [[REMenuItem alloc] initWithTitle:@"Access Key"
+//                                                           image:[UIImage imageNamed:@"Icon_Activity"]
+//                                                highlightedImage:nil
+//                                                          action:^(REMenuItem *item) {
+//                                                              UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"please add an access key" message:@"include numbers and chracters" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
+//                                                              alert.alertViewStyle = UIAlertViewStyleSecureTextInput;
+//                                                              [alert show];
+//                                                          }];
     
     
     
@@ -82,10 +82,10 @@
     
     categoryItem.tag = 0;
     providerItem.tag = 1;
-    accessKeyItem.tag = 2;
+//    accessKeyItem.tag = 2;
     productItem.tag = 3;
     
-    self.menu = [[REMenu alloc] initWithItems:@[categoryItem, providerItem, productItem, accessKeyItem]];
+    self.menu = [[REMenu alloc] initWithItems:@[categoryItem, providerItem, productItem]];
     
     // Background view
     //

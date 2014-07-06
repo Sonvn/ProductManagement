@@ -125,19 +125,23 @@
 	// Pass the selected object to the new view controller.
     
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    XProvider *selectedProvider = [self.providers objectAtIndex:indexPath.row];
     
-    if ([segue.identifier isEqualToString:@"ProviderTable2ProviderDetailSegueID"]) {
-		DetailProviderViewController *dest = [segue destinationViewController];
-		dest.provider = selectedProvider;
-	}
-    
-	else if ([segue.identifier isEqualToString:@"ProviderTable2ProductTableSegueID"]) {
-		ProductTableViewController *dest = [segue destinationViewController];
+    if (indexPath.length > 0){
+        XProvider *selectedProvider = [self.providers objectAtIndex:indexPath.row];
         
-		dest.navigationItem.title = [NSString stringWithFormat:@"Products - %@", selectedProvider.provider_name];
-		dest.managedObject = selectedProvider;
-	}
+        if ([segue.identifier isEqualToString:@"ProviderTable2ProviderDetailSegueID"]) {
+            DetailProviderViewController *dest = [segue destinationViewController];
+            dest.provider = selectedProvider;
+        }
+        
+        else if ([segue.identifier isEqualToString:@"ProviderTable2ProductTableSegueID"]) {
+            ProductTableViewController *dest = [segue destinationViewController];
+            
+            dest.navigationItem.title = [NSString stringWithFormat:@"Products - %@", selectedProvider.provider_name];
+            dest.managedObject = selectedProvider;
+        }
+    }
+    
 }
 
 @end

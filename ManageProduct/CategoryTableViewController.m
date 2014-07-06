@@ -127,18 +127,22 @@
 	// Pass the selected object to the new view controller.
     
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    XCategory *selectedCategory = [self.categories objectAtIndex:indexPath.row];
     
-	if ([segue.identifier isEqualToString:@"CategoryTable2CategoryDetailSegueID"]) {
-		DetailCategoryViewController *dest = [segue destinationViewController];
-		dest.category = selectedCategory;
-	}
-
-	else if ([segue.identifier isEqualToString:@"CategoryTable2ProductTableSegueID"]) {
-		ProductTableViewController *dest = [segue destinationViewController];
-		dest.navigationItem.title = [NSString stringWithFormat:@"Products - %@", [selectedCategory category_name]];
-		dest.managedObject = selectedCategory;
-	}
+    if (indexPath.length > 0){
+        XCategory *selectedCategory = [self.categories objectAtIndex:indexPath.row];
+        
+        if ([segue.identifier isEqualToString:@"CategoryTable2CategoryDetailSegueID"]) {
+            DetailCategoryViewController *dest = [segue destinationViewController];
+            dest.category = selectedCategory;
+        }
+        
+        else if ([segue.identifier isEqualToString:@"CategoryTable2ProductTableSegueID"]) {
+            ProductTableViewController *dest = [segue destinationViewController];
+            dest.navigationItem.title = [NSString stringWithFormat:@"Products - %@", [selectedCategory category_name]];
+            dest.managedObject = selectedCategory;
+        }
+    }
+    
 }
 
 @end
