@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "CategoryTableViewController.h"
-#import "NavigationViewController.h"
 
 @implementation AppDelegate
 

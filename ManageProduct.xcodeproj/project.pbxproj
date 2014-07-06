@@ -62,18 +62,6 @@
 		669F076B190916B40085BE94 /* ProductTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 669F076A190916B40085BE94 /* ProductTableViewController.m */; };
 		669F076E190917740085BE94 /* AddProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 669F076D190917740085BE94 /* AddProductViewController.m */; };
 		66CEB7031906A51300E76CD6 /* setting-icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 66CEB7021906A51300E76CD6 /* setting-icon1.png */; };
-		66CEB70F1906B05200E76CD6 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CEB7061906B05200E76CD6 /* RECommonFunctions.m */; };
-		66CEB7101906B05200E76CD6 /* REMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CEB7081906B05200E76CD6 /* REMenu.m */; };
-		66CEB7111906B05200E76CD6 /* REMenuContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CEB70A1906B05200E76CD6 /* REMenuContainerView.m */; };
-		66CEB7121906B05200E76CD6 /* REMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CEB70C1906B05200E76CD6 /* REMenuItem.m */; };
-		66CEB7131906B05200E76CD6 /* REMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CEB70E1906B05200E76CD6 /* REMenuItemView.m */; };
-		66CEB7241906B07D00E76CD6 /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CEB7171906B07D00E76CD6 /* NSMutableArray+SWUtilityButtons.m */; };
-		66CEB7251906B07D00E76CD6 /* RMSwipeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CEB7191906B07D00E76CD6 /* RMSwipeTableViewCell.m */; };
-		66CEB7261906B07D00E76CD6 /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CEB71B1906B07D00E76CD6 /* SWCellScrollView.m */; };
-		66CEB7271906B07D00E76CD6 /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CEB71D1906B07D00E76CD6 /* SWLongPressGestureRecognizer.m */; };
-		66CEB7281906B07D00E76CD6 /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CEB71F1906B07D00E76CD6 /* SWTableViewCell.m */; };
-		66CEB7291906B07D00E76CD6 /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CEB7211906B07D00E76CD6 /* SWUtilityButtonTapGestureRecognizer.m */; };
-		66CEB72A1906B07D00E76CD6 /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CEB7231906B07D00E76CD6 /* SWUtilityButtonView.m */; };
 		66CEB73B1906B2D200E76CD6 /* Balloon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66CEB72F1906B2D200E76CD6 /* Balloon@2x.png */; };
 		66CEB73C1906B2D200E76CD6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66CEB7301906B2D200E76CD6 /* Default-568h@2x.png */; };
 		66CEB73D1906B2D200E76CD6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 66CEB7311906B2D200E76CD6 /* Default.png */; };
@@ -86,9 +74,7 @@
 		66CEB7441906B2D200E76CD6 /* Icon_Home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66CEB7381906B2D200E76CD6 /* Icon_Home@2x.png */; };
 		66CEB7451906B2D200E76CD6 /* Icon_Profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 66CEB7391906B2D200E76CD6 /* Icon_Profile.png */; };
 		66CEB7461906B2D200E76CD6 /* Icon_Profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66CEB73A1906B2D200E76CD6 /* Icon_Profile@2x.png */; };
-		66CEB7551906D0DF00E76CD6 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CEB7541906D0DF00E76CD6 /* NavigationViewController.m */; };
 		66CEB7581906D74A00E76CD6 /* AccessKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CEB7571906D74A00E76CD6 /* AccessKey.m */; };
-		66CEB75E1906DAD400E76CD6 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CEB75D1906DAD400E76CD6 /* RootViewController.m */; };
 		66CEB7641906E53E00E76CD6 /* ProviderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CEB7631906E53E00E76CD6 /* ProviderTableViewController.m */; };
 		66E52FBA19073DD70011AE62 /* AddCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E52FB919073DD70011AE62 /* AddCategoryViewController.m */; };
 /* End PBXBuildFile section */
@@ -202,31 +188,6 @@
 		669F076C190917740085BE94 /* AddProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddProductViewController.h; sourceTree = "<group>"; };
 		669F076D190917740085BE94 /* AddProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddProductViewController.m; sourceTree = "<group>"; };
 		66CEB7021906A51300E76CD6 /* setting-icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting-icon1.png"; sourceTree = SOURCE_ROOT; };
-		66CEB7051906B05200E76CD6 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
-		66CEB7061906B05200E76CD6 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
-		66CEB7071906B05200E76CD6 /* REMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMenu.h; sourceTree = "<group>"; };
-		66CEB7081906B05200E76CD6 /* REMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMenu.m; sourceTree = "<group>"; };
-		66CEB7091906B05200E76CD6 /* REMenuContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMenuContainerView.h; sourceTree = "<group>"; };
-		66CEB70A1906B05200E76CD6 /* REMenuContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMenuContainerView.m; sourceTree = "<group>"; };
-		66CEB70B1906B05200E76CD6 /* REMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMenuItem.h; sourceTree = "<group>"; };
-		66CEB70C1906B05200E76CD6 /* REMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMenuItem.m; sourceTree = "<group>"; };
-		66CEB70D1906B05200E76CD6 /* REMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMenuItemView.h; sourceTree = "<group>"; };
-		66CEB70E1906B05200E76CD6 /* REMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMenuItemView.m; sourceTree = "<group>"; };
-		66CEB7151906B07D00E76CD6 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		66CEB7161906B07D00E76CD6 /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
-		66CEB7171906B07D00E76CD6 /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
-		66CEB7181906B07D00E76CD6 /* RMSwipeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSwipeTableViewCell.h; sourceTree = "<group>"; };
-		66CEB7191906B07D00E76CD6 /* RMSwipeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMSwipeTableViewCell.m; sourceTree = "<group>"; };
-		66CEB71A1906B07D00E76CD6 /* SWCellScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCellScrollView.h; sourceTree = "<group>"; };
-		66CEB71B1906B07D00E76CD6 /* SWCellScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCellScrollView.m; sourceTree = "<group>"; };
-		66CEB71C1906B07D00E76CD6 /* SWLongPressGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWLongPressGestureRecognizer.h; sourceTree = "<group>"; };
-		66CEB71D1906B07D00E76CD6 /* SWLongPressGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWLongPressGestureRecognizer.m; sourceTree = "<group>"; };
-		66CEB71E1906B07D00E76CD6 /* SWTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTableViewCell.h; sourceTree = "<group>"; };
-		66CEB71F1906B07D00E76CD6 /* SWTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTableViewCell.m; sourceTree = "<group>"; };
-		66CEB7201906B07D00E76CD6 /* SWUtilityButtonTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonTapGestureRecognizer.h; sourceTree = "<group>"; };
-		66CEB7211906B07D00E76CD6 /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
-		66CEB7221906B07D00E76CD6 /* SWUtilityButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonView.h; sourceTree = "<group>"; };
-		66CEB7231906B07D00E76CD6 /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonView.m; sourceTree = "<group>"; };
 		66CEB72F1906B2D200E76CD6 /* Balloon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Balloon@2x.png"; sourceTree = "<group>"; };
 		66CEB7301906B2D200E76CD6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		66CEB7311906B2D200E76CD6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -239,12 +200,8 @@
 		66CEB7381906B2D200E76CD6 /* Icon_Home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon_Home@2x.png"; sourceTree = "<group>"; };
 		66CEB7391906B2D200E76CD6 /* Icon_Profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_Profile.png; sourceTree = "<group>"; };
 		66CEB73A1906B2D200E76CD6 /* Icon_Profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon_Profile@2x.png"; sourceTree = "<group>"; };
-		66CEB7531906D0DF00E76CD6 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
-		66CEB7541906D0DF00E76CD6 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
 		66CEB7561906D74A00E76CD6 /* AccessKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessKey.h; sourceTree = "<group>"; };
 		66CEB7571906D74A00E76CD6 /* AccessKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessKey.m; sourceTree = "<group>"; };
-		66CEB75C1906DAD400E76CD6 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		66CEB75D1906DAD400E76CD6 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		66CEB7621906E53E00E76CD6 /* ProviderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProviderTableViewController.h; sourceTree = "<group>"; };
 		66CEB7631906E53E00E76CD6 /* ProviderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProviderTableViewController.m; sourceTree = "<group>"; };
 		66E52FB819073DD70011AE62 /* AddCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCategoryViewController.h; sourceTree = "<group>"; };
@@ -398,14 +355,10 @@
 			children = (
 				483FEE8319067E7700B23141 /* CategoryTableViewController.h */,
 				483FEE8419067E7700B23141 /* CategoryTableViewController.m */,
-				66CEB7531906D0DF00E76CD6 /* NavigationViewController.h */,
-				66CEB7541906D0DF00E76CD6 /* NavigationViewController.m */,
 				669F0769190916B40085BE94 /* ProductTableViewController.h */,
 				669F076A190916B40085BE94 /* ProductTableViewController.m */,
 				66CEB7621906E53E00E76CD6 /* ProviderTableViewController.h */,
 				66CEB7631906E53E00E76CD6 /* ProviderTableViewController.m */,
-				66CEB75C1906DAD400E76CD6 /* RootViewController.h */,
-				66CEB75D1906DAD400E76CD6 /* RootViewController.m */,
 			);
 			name = ListView;
 			sourceTree = "<group>";
@@ -465,8 +418,6 @@
 				666C0C56190503B800260977 /* ManageProduct */,
 				666C0C73190503B900260977 /* ManageProductTests */,
 				666C0C4C190503B800260977 /* Products */,
-				66CEB7041906B05200E76CD6 /* REMenu */,
-				66CEB7141906B07D00E76CD6 /* SwipTable */,
 			);
 			sourceTree = "<group>";
 		};
@@ -533,47 +484,6 @@
 				666C0C76190503B900260977 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		66CEB7041906B05200E76CD6 /* REMenu */ = {
-			isa = PBXGroup;
-			children = (
-				66CEB7051906B05200E76CD6 /* RECommonFunctions.h */,
-				66CEB7061906B05200E76CD6 /* RECommonFunctions.m */,
-				66CEB7071906B05200E76CD6 /* REMenu.h */,
-				66CEB7081906B05200E76CD6 /* REMenu.m */,
-				66CEB7091906B05200E76CD6 /* REMenuContainerView.h */,
-				66CEB70A1906B05200E76CD6 /* REMenuContainerView.m */,
-				66CEB70B1906B05200E76CD6 /* REMenuItem.h */,
-				66CEB70C1906B05200E76CD6 /* REMenuItem.m */,
-				66CEB70D1906B05200E76CD6 /* REMenuItemView.h */,
-				66CEB70E1906B05200E76CD6 /* REMenuItemView.m */,
-			);
-			name = REMenu;
-			path = ManageProduct/REMenu;
-			sourceTree = "<group>";
-		};
-		66CEB7141906B07D00E76CD6 /* SwipTable */ = {
-			isa = PBXGroup;
-			children = (
-				66CEB7151906B07D00E76CD6 /* Constants.h */,
-				66CEB7161906B07D00E76CD6 /* NSMutableArray+SWUtilityButtons.h */,
-				66CEB7171906B07D00E76CD6 /* NSMutableArray+SWUtilityButtons.m */,
-				66CEB7181906B07D00E76CD6 /* RMSwipeTableViewCell.h */,
-				66CEB7191906B07D00E76CD6 /* RMSwipeTableViewCell.m */,
-				66CEB71A1906B07D00E76CD6 /* SWCellScrollView.h */,
-				66CEB71B1906B07D00E76CD6 /* SWCellScrollView.m */,
-				66CEB71C1906B07D00E76CD6 /* SWLongPressGestureRecognizer.h */,
-				66CEB71D1906B07D00E76CD6 /* SWLongPressGestureRecognizer.m */,
-				66CEB71E1906B07D00E76CD6 /* SWTableViewCell.h */,
-				66CEB71F1906B07D00E76CD6 /* SWTableViewCell.m */,
-				66CEB7201906B07D00E76CD6 /* SWUtilityButtonTapGestureRecognizer.h */,
-				66CEB7211906B07D00E76CD6 /* SWUtilityButtonTapGestureRecognizer.m */,
-				66CEB7221906B07D00E76CD6 /* SWUtilityButtonView.h */,
-				66CEB7231906B07D00E76CD6 /* SWUtilityButtonView.m */,
-			);
-			name = SwipTable;
-			path = ManageProduct/SwipTable;
 			sourceTree = "<group>";
 		};
 		66CEB72E1906B2B900E76CD6 /* Images */ = {
@@ -709,9 +619,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66CEB7101906B05200E76CD6 /* REMenu.m in Sources */,
 				48E2F4AD1913A9940077A019 /* DetailCategoryViewController.m in Sources */,
-				66CEB7271906B07D00E76CD6 /* SWLongPressGestureRecognizer.m in Sources */,
 				669F0768190907BE0085BE94 /* AddProviderViewController.m in Sources */,
 				48E2F48E191385740077A019 /* NSManagedObject+MagicalFinders.m in Sources */,
 				66CEB7581906D74A00E76CD6 /* AccessKey.m in Sources */,
@@ -719,34 +627,22 @@
 				48E2F49A191385740077A019 /* MagicalRecord+iCloud.m in Sources */,
 				48E2F48C191385740077A019 /* NSManagedObject+MagicalAggregation.m in Sources */,
 				48E2F485191385740077A019 /* MagicalImportFunctions.m in Sources */,
-				66CEB72A1906B07D00E76CD6 /* SWUtilityButtonView.m in Sources */,
 				48E2F489191385740077A019 /* NSObject+MagicalDataImport.m in Sources */,
 				48E2F48D191385740077A019 /* NSManagedObject+MagicalDataImport.m in Sources */,
-				66CEB7121906B05200E76CD6 /* REMenuItem.m in Sources */,
-				66CEB7241906B07D00E76CD6 /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				48E2F48F191385740077A019 /* NSManagedObject+MagicalRecord.m in Sources */,
-				66CEB7111906B05200E76CD6 /* REMenuContainerView.m in Sources */,
 				48E2F49B191385740077A019 /* MagicalRecord+Options.m in Sources */,
-				66CEB75E1906DAD400E76CD6 /* RootViewController.m in Sources */,
-				66CEB7551906D0DF00E76CD6 /* NavigationViewController.m in Sources */,
 				483A750F1915458D00E7BA38 /* XProduct.m in Sources */,
 				48E2F499191385740077A019 /* MagicalRecord+ErrorHandling.m in Sources */,
-				66CEB7291906B07D00E76CD6 /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
-				66CEB70F1906B05200E76CD6 /* RECommonFunctions.m in Sources */,
 				666C0C61190503B800260977 /* AppDelegate.m in Sources */,
 				48E2F492191385740077A019 /* NSManagedObjectContext+MagicalRecord.m in Sources */,
 				48E2F498191385740077A019 /* MagicalRecord+Actions.m in Sources */,
 				48E2F49C191385740077A019 /* MagicalRecord+Setup.m in Sources */,
 				48E2F496191385740077A019 /* NSPersistentStore+MagicalRecord.m in Sources */,
-				66CEB7261906B07D00E76CD6 /* SWCellScrollView.m in Sources */,
 				48E2F487191385740077A019 /* NSEntityDescription+MagicalDataImport.m in Sources */,
 				669F076B190916B40085BE94 /* ProductTableViewController.m in Sources */,
 				48E2F491191385740077A019 /* NSManagedObjectContext+MagicalObserving.m in Sources */,
-				66CEB7251906B07D00E76CD6 /* RMSwipeTableViewCell.m in Sources */,
 				483FEE8519067E7700B23141 /* CategoryTableViewController.m in Sources */,
 				48E2F49E191385740077A019 /* MagicalRecord.m in Sources */,
-				66CEB7281906B07D00E76CD6 /* SWTableViewCell.m in Sources */,
-				66CEB7131906B05200E76CD6 /* REMenuItemView.m in Sources */,
 				66E52FBA19073DD70011AE62 /* AddCategoryViewController.m in Sources */,
 				48E2F497191385740077A019 /* NSPersistentStoreCoordinator+MagicalRecord.m in Sources */,
 				48E2F4B01913A9AC0077A019 /* DetailProviderViewController.m in Sources */,

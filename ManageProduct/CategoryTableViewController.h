@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RootViewController.h"
 
-@interface CategoryTableViewController : RootViewController
+@interface CategoryTableViewController : UITableViewController
 
 @property (nonatomic, strong) NSArray *categories;
 

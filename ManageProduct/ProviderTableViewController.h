@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "REMenu.h"
-#import "RootViewController.h"
 
-@interface ProviderTableViewController : RootViewController
+@interface ProviderTableViewController : UITableViewController
 
 @property (nonatomic, strong) NSArray *providers;
 

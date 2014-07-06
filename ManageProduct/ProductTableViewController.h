@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RootViewController.h"
 
 #import "XCategory.h"
 #import "XProvider.h"
 
-@interface ProductTableViewController : RootViewController
+@interface ProductTableViewController : UITableViewController
 
 @property (nonatomic, strong) id managedObject;
 
