@@ -40,7 +40,7 @@
 	[super viewDidAppear:animated];
 	self.providers = [XProvider MR_findAll];
 	[self.tableView reloadData];
-	NSLog(@"ProviderTable: There are %lu providers", (unsigned long)[self.providers count]);
+//	NSLog(@"ProviderTable: There are %lu providers", (unsigned long)[self.providers count]);
 }
 
 - (void)didReceiveMemoryWarning {

@@ -40,7 +40,7 @@
 	[super viewDidAppear:animated];
 	self.categories = [XCategory MR_findAll];
 	[self.tableView reloadData];
-	NSLog(@"CategoryTable: There are %lu categories", (unsigned long)[self.categories count]);
+//	NSLog(@"CategoryTable: There are %lu categories", (unsigned long)[self.categories count]);
 }
 
 - (void)didReceiveMemoryWarning {

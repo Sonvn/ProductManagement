@@ -11,6 +11,17 @@
 		483A75121915458E00E7BA38 /* XProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 483A75111915458E00E7BA38 /* XProvider.m */; };
 		483A75151915458E00E7BA38 /* XCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 483A75141915458E00E7BA38 /* XCategory.m */; };
 		483FEE8519067E7700B23141 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 483FEE8419067E7700B23141 /* CategoryTableViewController.m */; };
+		486AACB71969A67900DD4D6F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 486AACB61969A67900DD4D6F /* Parse.framework */; };
+		486AACC11969A71000DD4D6F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 486AACB81969A70F00DD4D6F /* AudioToolbox.framework */; };
+		486AACC21969A71000DD4D6F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 486AACB91969A70F00DD4D6F /* CFNetwork.framework */; };
+		486AACC31969A71000DD4D6F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 486AACBA1969A71000DD4D6F /* CoreLocation.framework */; };
+		486AACC41969A71000DD4D6F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 486AACBB1969A71000DD4D6F /* libz.dylib */; };
+		486AACC51969A71000DD4D6F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 486AACBC1969A71000DD4D6F /* MobileCoreServices.framework */; };
+		486AACC61969A71000DD4D6F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 486AACBD1969A71000DD4D6F /* QuartzCore.framework */; };
+		486AACC71969A71000DD4D6F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 486AACBE1969A71000DD4D6F /* Security.framework */; };
+		486AACC81969A71000DD4D6F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 486AACBF1969A71000DD4D6F /* StoreKit.framework */; };
+		486AACC91969A71000DD4D6F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 486AACC01969A71000DD4D6F /* SystemConfiguration.framework */; };
+		486AACCC1969A80600DD4D6F /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 486AACCB1969A80600DD4D6F /* HomeTableViewController.m */; };
 		48E2F485191385740077A019 /* MagicalImportFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E2F44B191385740077A019 /* MagicalImportFunctions.m */; };
 		48E2F486191385740077A019 /* NSAttributeDescription+MagicalDataImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E2F44D191385740077A019 /* NSAttributeDescription+MagicalDataImport.m */; };
 		48E2F487191385740077A019 /* NSEntityDescription+MagicalDataImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E2F44F191385740077A019 /* NSEntityDescription+MagicalDataImport.m */; };
@@ -74,7 +85,6 @@
 		66CEB7441906B2D200E76CD6 /* Icon_Home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66CEB7381906B2D200E76CD6 /* Icon_Home@2x.png */; };
 		66CEB7451906B2D200E76CD6 /* Icon_Profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 66CEB7391906B2D200E76CD6 /* Icon_Profile.png */; };
 		66CEB7461906B2D200E76CD6 /* Icon_Profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66CEB73A1906B2D200E76CD6 /* Icon_Profile@2x.png */; };
-		66CEB7581906D74A00E76CD6 /* AccessKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CEB7571906D74A00E76CD6 /* AccessKey.m */; };
 		66CEB7641906E53E00E76CD6 /* ProviderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CEB7631906E53E00E76CD6 /* ProviderTableViewController.m */; };
 		66E52FBA19073DD70011AE62 /* AddCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E52FB919073DD70011AE62 /* AddCategoryViewController.m */; };
 /* End PBXBuildFile section */
@@ -98,6 +108,18 @@
 		483A75141915458E00E7BA38 /* XCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCategory.m; sourceTree = "<group>"; };
 		483FEE8319067E7700B23141 /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
 		483FEE8419067E7700B23141 /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
+		486AACB61969A67900DD4D6F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		486AACB81969A70F00DD4D6F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		486AACB91969A70F00DD4D6F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		486AACBA1969A71000DD4D6F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		486AACBB1969A71000DD4D6F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		486AACBC1969A71000DD4D6F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		486AACBD1969A71000DD4D6F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		486AACBE1969A71000DD4D6F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		486AACBF1969A71000DD4D6F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		486AACC01969A71000DD4D6F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		486AACCA1969A80600DD4D6F /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
+		486AACCB1969A80600DD4D6F /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
 		48E2F44A191385740077A019 /* MagicalImportFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalImportFunctions.h; sourceTree = "<group>"; };
 		48E2F44B191385740077A019 /* MagicalImportFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalImportFunctions.m; sourceTree = "<group>"; };
 		48E2F44C191385740077A019 /* NSAttributeDescription+MagicalDataImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributeDescription+MagicalDataImport.h"; sourceTree = "<group>"; };
@@ -200,8 +222,6 @@
 		66CEB7381906B2D200E76CD6 /* Icon_Home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon_Home@2x.png"; sourceTree = "<group>"; };
 		66CEB7391906B2D200E76CD6 /* Icon_Profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_Profile.png; sourceTree = "<group>"; };
 		66CEB73A1906B2D200E76CD6 /* Icon_Profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon_Profile@2x.png"; sourceTree = "<group>"; };
-		66CEB7561906D74A00E76CD6 /* AccessKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessKey.h; sourceTree = "<group>"; };
-		66CEB7571906D74A00E76CD6 /* AccessKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessKey.m; sourceTree = "<group>"; };
 		66CEB7621906E53E00E76CD6 /* ProviderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProviderTableViewController.h; sourceTree = "<group>"; };
 		66CEB7631906E53E00E76CD6 /* ProviderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProviderTableViewController.m; sourceTree = "<group>"; };
 		66E52FB819073DD70011AE62 /* AddCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCategoryViewController.h; sourceTree = "<group>"; };
@@ -213,10 +233,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				486AACC11969A71000DD4D6F /* AudioToolbox.framework in Frameworks */,
+				486AACC21969A71000DD4D6F /* CFNetwork.framework in Frameworks */,
+				486AACC31969A71000DD4D6F /* CoreLocation.framework in Frameworks */,
+				486AACC41969A71000DD4D6F /* libz.dylib in Frameworks */,
+				486AACC51969A71000DD4D6F /* MobileCoreServices.framework in Frameworks */,
+				486AACC61969A71000DD4D6F /* QuartzCore.framework in Frameworks */,
+				486AACC71969A71000DD4D6F /* Security.framework in Frameworks */,
+				486AACC81969A71000DD4D6F /* StoreKit.framework in Frameworks */,
+				486AACC91969A71000DD4D6F /* SystemConfiguration.framework in Frameworks */,
 				666C0C51190503B800260977 /* CoreGraphics.framework in Frameworks */,
 				666C0C55190503B800260977 /* CoreData.framework in Frameworks */,
 				666C0C53190503B800260977 /* UIKit.framework in Frameworks */,
 				666C0C4F190503B800260977 /* Foundation.framework in Frameworks */,
+				486AACB71969A67900DD4D6F /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +389,8 @@
 				669F076A190916B40085BE94 /* ProductTableViewController.m */,
 				66CEB7621906E53E00E76CD6 /* ProviderTableViewController.h */,
 				66CEB7631906E53E00E76CD6 /* ProviderTableViewController.m */,
+				486AACCA1969A80600DD4D6F /* HomeTableViewController.h */,
+				486AACCB1969A80600DD4D6F /* HomeTableViewController.m */,
 			);
 			name = ListView;
 			sourceTree = "<group>";
@@ -389,8 +421,6 @@
 		6657AC331909670500775AA3 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				66CEB7561906D74A00E76CD6 /* AccessKey.h */,
-				66CEB7571906D74A00E76CD6 /* AccessKey.m */,
 				6657AC341909670D00775AA3 /* Entities */,
 				666C0C62190503B800260977 /* ManageProduct.xcdatamodeld */,
 			);
@@ -433,6 +463,16 @@
 		666C0C4D190503B800260977 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				486AACB81969A70F00DD4D6F /* AudioToolbox.framework */,
+				486AACB91969A70F00DD4D6F /* CFNetwork.framework */,
+				486AACBA1969A71000DD4D6F /* CoreLocation.framework */,
+				486AACBB1969A71000DD4D6F /* libz.dylib */,
+				486AACBC1969A71000DD4D6F /* MobileCoreServices.framework */,
+				486AACBD1969A71000DD4D6F /* QuartzCore.framework */,
+				486AACBE1969A71000DD4D6F /* Security.framework */,
+				486AACBF1969A71000DD4D6F /* StoreKit.framework */,
+				486AACC01969A71000DD4D6F /* SystemConfiguration.framework */,
+				486AACB61969A67900DD4D6F /* Parse.framework */,
 				666C0C4E190503B800260977 /* Foundation.framework */,
 				666C0C50190503B800260977 /* CoreGraphics.framework */,
 				666C0C52190503B800260977 /* UIKit.framework */,
@@ -622,7 +662,6 @@
 				48E2F4AD1913A9940077A019 /* DetailCategoryViewController.m in Sources */,
 				669F0768190907BE0085BE94 /* AddProviderViewController.m in Sources */,
 				48E2F48E191385740077A019 /* NSManagedObject+MagicalFinders.m in Sources */,
-				66CEB7581906D74A00E76CD6 /* AccessKey.m in Sources */,
 				48E2F48B191385740077A019 /* NSString+MagicalDataImport.m in Sources */,
 				48E2F49A191385740077A019 /* MagicalRecord+iCloud.m in Sources */,
 				48E2F48C191385740077A019 /* NSManagedObject+MagicalAggregation.m in Sources */,
@@ -630,6 +669,7 @@
 				48E2F489191385740077A019 /* NSObject+MagicalDataImport.m in Sources */,
 				48E2F48D191385740077A019 /* NSManagedObject+MagicalDataImport.m in Sources */,
 				48E2F48F191385740077A019 /* NSManagedObject+MagicalRecord.m in Sources */,
+				486AACCC1969A80600DD4D6F /* HomeTableViewController.m in Sources */,
 				48E2F49B191385740077A019 /* MagicalRecord+Options.m in Sources */,
 				483A750F1915458D00E7BA38 /* XProduct.m in Sources */,
 				48E2F499191385740077A019 /* MagicalRecord+ErrorHandling.m in Sources */,
@@ -778,6 +818,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = k15bhahaha;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ManageProduct/ManageProduct-Prefix.pch";
 				INFOPLIST_FILE = "ManageProduct/ManageProduct-Info.plist";
@@ -794,6 +838,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = k15bhahaha;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ManageProduct/ManageProduct-Prefix.pch";
 				INFOPLIST_FILE = "ManageProduct/ManageProduct-Info.plist";
